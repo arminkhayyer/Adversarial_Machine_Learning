@@ -99,7 +99,6 @@ class aSimpleExploratoryAttacker:
         kid.randomly_generate(self.lb, self.ub)
         if self.crossover == "SPX":
             single_point = random.randint(1, self.chromosome_length-1)
-            print(single_point, "khar")
             for j in range(self.chromosome_length):
                 if j <= single_point:
                     kid.chromosome[j] = mom.chromosome[j]
@@ -142,7 +141,6 @@ class aSimpleExploratoryAttacker:
             worst_individual = self.get_worst_fit_individual()
             self.population.pop(worst_individual)
             kid = self.Crossover_operator(mom, dad)
-            print("khar")
             self.population.append(kid)
             kid.calculate_fitness()
             self.hacker_tracker_x.append(kid.chromosome[0])
@@ -206,7 +204,7 @@ for i in range(MaxEvaluations-PopSize+1):
         if (plot == 1):
             simple_exploratory_attacker.plot_evolved_candidate_solutions()
         print("At Iteration: " + str(i))
-        #simple_exploratory_attacker.print_population()
+        simple_exploratory_attacker.print_population()
     if (simple_exploratory_attacker.get_best_fitness() >= 0.99754):
         break
 
