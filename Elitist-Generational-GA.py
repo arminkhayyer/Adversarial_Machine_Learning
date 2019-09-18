@@ -168,11 +168,6 @@ class aSimpleExploratoryAttacker:
             
             kid = self.Crossover_operator(mom, dad)
             elite_individual = self.get_best_fitness() 
-            self.population.append(kid)
-            kid.calculate_fitness()
-            self.hacker_tracker_x.append(kid.chromosome[0])
-            self.hacker_tracker_y.append(kid.chromosome[1])
-            self.hacker_tracker_z.append(kid.fitness)
             
             if elite_individual == (self.population.index(mom)):
                 self.population.pop(self.population.index(dad))
@@ -180,6 +175,12 @@ class aSimpleExploratoryAttacker:
                 self.population.pop(self.population.index(mom))
             else:
                 self.population.pop(self.population.index(random.choice(parents)))
+                
+            self.population.append(kid)
+            kid.calculate_fitness()
+            self.hacker_tracker_x.append(kid.chromosome[0])
+            self.hacker_tracker_y.append(kid.chromosome[1])
+            self.hacker_tracker_z.append(kid.fitness)
 
 
             
@@ -213,8 +214,8 @@ lb = -100.0
 MaxEvaluations = 4000
 plot = 0
 
-PopSize = 10
-mu_amt  = 0.0015
+PopSize = 3
+mu_amt  = 0.0075
 
 simple_exploratory_attacker = aSimpleExploratoryAttacker(PopSize,ChromLength,mu_amt,lb,ub, crossover="SPX", strategy="E", )
 

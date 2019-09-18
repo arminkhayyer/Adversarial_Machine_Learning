@@ -211,12 +211,12 @@ ChromLength = 2
 ub = 100.0
 lb = -100.0
 MaxEvaluations = 4000
-plot = 1
+plot = 0
 
-PopSize = 10
-mu_amt = 0.01
+PopSize = 15
+mu_amt = 0.0120
 
-simple_exploratory_attacker = aSimpleExploratoryAttacker(PopSize, ChromLength, mu_amt, lb, ub, crossover="SPX", )
+simple_exploratory_attacker = aSimpleExploratoryAttacker(PopSize, ChromLength, mu_amt, lb, ub, crossover="SPX",strategy="Generational" )
 
 simple_exploratory_attacker.generate_initial_population()
 # simple_exploratory_attacker.print_population()
