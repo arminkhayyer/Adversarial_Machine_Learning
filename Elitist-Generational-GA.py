@@ -92,8 +92,10 @@ class aSimpleExploratoryAttacker:
         parent1 = tournoment_output1[best_indivisual1.index(max(best_indivisual1))]
 
         tournoment_output2 = random.choices(self.population, k=k)
+        
         best_indivisual2 = [i.fitness for i in tournoment_output2]
         parent2 = tournoment_output2[best_indivisual2.index(max(best_indivisual2))]
+       
         return parent1, parent2
 
 
@@ -162,19 +164,24 @@ class aSimpleExploratoryAttacker:
                 self.hacker_tracker_z.append(kid.fitness)
             self.population.pop(worst_individual)
         
-        elif self.strategy == "Mu,Mu":
-            kid1 = self.Crossover_operator(mom, dad)
-            self.population.append(kid1)
-            kid1.calculate_fitness()
-            self.hacker_tracker_x.append(kid1.chromosome[0])
-            self.hacker_tracker_y.append(kid1.chromosome[1])
-            self.hacker_tracker_z.append(kid1.fitness)
-            #kid2 = self.Crossover_operator(mom, dad)
-            #kid2.calculate_fitness()
-            #self.hacker_tracker_x.append(kid2.chromosome[0])
-            #self.hacker_tracker_y.append(kid2.chromosome[1])
-            #self.hacker_tracker_z.append(kid2.fitness)
-            self.population.pop(random.choice(parents).population)
+        elif self.strategy == "E":
+            
+            kid = self.Crossover_operator(mom, dad)
+            elite_individual = self.get_best_fitness() 
+            self.population.append(kid)
+            kid.calculate_fitness()
+            self.hacker_tracker_x.append(kid.chromosome[0])
+            self.hacker_tracker_y.append(kid.chromosome[1])
+            self.hacker_tracker_z.append(kid.fitness)
+            
+            if elite_individual == (self.population.index(mom)):
+                self.population.pop(self.population.index(dad))
+            elif elite_individual == self.population.index(dad):
+                self.population.pop(self.population.index(mom))
+            else:
+                self.population.pop(self.population.index(random.choice(parents)))
+
+
             
     def print_population(self):
         for i in range(self.population_size):
@@ -206,10 +213,10 @@ lb = -100.0
 MaxEvaluations = 4000
 plot = 0
 
-PopSize = 3
-mu_amt  = 0.0075
+PopSize = 10
+mu_amt  = 0.0015
 
-simple_exploratory_attacker = aSimpleExploratoryAttacker(PopSize,ChromLength,mu_amt,lb,ub, crossover="SPX", strategy="Mu+1", )
+simple_exploratory_attacker = aSimpleExploratoryAttacker(PopSize,ChromLength,mu_amt,lb,ub, crossover="SPX", strategy="E", )
 
 simple_exploratory_attacker.generate_initial_population()
 simple_exploratory_attacker.print_population()
