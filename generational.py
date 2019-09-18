@@ -165,7 +165,6 @@ class aSimpleExploratoryAttacker:
             self.population.pop(worst_individual)
 
 
-
         elif self.strategy == "Generational":
             intermediate = []
             for i in range(self.population_size):
