@@ -149,7 +149,7 @@ class aSimpleExploratoryAttacker:
 
     def evolutionary_cycle(self):
         
-        if self.strategy == "steady state":
+        if self.strategy == "SteadyState":
             mom, dad  = self.tournoment_selection()
             worst_individual = self.get_worst_fit_individual()
             self.population.pop(worst_individual)
@@ -172,7 +172,7 @@ class aSimpleExploratoryAttacker:
                 self.hacker_tracker_z.append(kid.fitness)
             self.population.pop(worst_individual)
         
-        elif self.strategy == "Elitist-GA":
+        elif self.strategy == "ElitistGen-GA":
             population_kids = []
             elite_individual = self.get_best_fit_individual()
             for i in range(self.population_size):
@@ -188,20 +188,24 @@ class aSimpleExploratoryAttacker:
             self.population.pop(worst_individual)
             self.population.append(elite_individual)
             
-        elif self.strategy == "Steady-GA":
-                intermediate = []
-                for i in range(self.population_size):
-                    mom, dad = self.tournoment_selection()
-                    kid = self.Crossover_operator(mom, dad)
-                    intermediate.append(kid)
-                    kid.calculate_fitness()
-                    self.hacker_tracker_x.append(kid.chromosome[0])
-                    self.hacker_tracker_y.append(kid.chromosome[1])
-                    self.hacker_tracker_z.append(kid.fitness)
-                self.population.clear()
-                # print(len(self.population))
-                for i in range(len(intermediate)):
-                    self.population.append(intermediate[i])
+        elif self.strategy == "SteadyGen-GA":
+            intermediate = []
+            kids = []
+            for i in range(self.population_size):
+                mom, dad = self.tournoment_selection()
+                kid = self.Crossover_operator(mom, dad)
+                kids.append(kid)
+                kid.calculate_fitness()
+                self.hacker_tracker_x.append(kid.chromosome[0])
+                self.hacker_tracker_y.append(kid.chromosome[1])
+                self.hacker_tracker_z.append(kid.fitness)
+            worst_individual = self.get_worst_fit_individual()
+            self.population.pop(worst_individual)
+            intermediate = self.population
+            self.population = kids
+            best_fit_kid = self.get_best_fit_individual()
+            self.population = intermediate
+            self.population.append(best_fit_kid)
 
         elif self.strategy == "Mu+Mu":
             elite_individual = self.get_best_fit_individual()
@@ -251,7 +255,7 @@ plot = 0
 PopSize = 25
 mu_amt  = 0.01
 
-simple_exploratory_attacker = aSimpleExploratoryAttacker(PopSize,ChromLength,mu_amt,lb,ub, crossover="SPX", strategy="Mu+Mu", )
+simple_exploratory_attacker = aSimpleExploratoryAttacker(PopSize,ChromLength,mu_amt,lb,ub, crossover="SPX", strategy="SteadyGen-GA", )
 
 simple_exploratory_attacker.generate_initial_population()
 simple_exploratory_attacker.print_population()
