@@ -265,13 +265,13 @@ lb = -100.0
 MaxEvaluations = 4000
 plot = 0
 
-PopSize = 15
+PopSize = 25
 mu_amt  = 0.01
 
 
 
 df = pd.DataFrame(index=[i for i in range(50)], columns=[ "Run", "SPX_best", "SPX_Function_Evaluations","Midx_best", 	"Midx_Function_Evaluations", "BLX_0.0_best", "BLX_0.0_Function_Evaluations"])
-strategy = "Mu+1"
+strategy = "ElitistGen-GA"
 for k in range(50):
     df.iloc[k]["Run"] = k
     for j in ["SPX", "Midx", "BLX_0.0" ]:
