@@ -271,7 +271,7 @@ mu_amt  = 0.01
 
 
 df = pd.DataFrame(index=[i for i in range(50)], columns=[ "Run", "SPX_best", "SPX_Function_Evaluations","Midx_best", 	"Midx_Function_Evaluations", "BLX_0.0_best", "BLX_0.0_Function_Evaluations"])
-strategy = "ElitistGen-GA"
+strategy = "Mu+Mu"
 for k in range(50):
     df.iloc[k]["Run"] = k
     for j in ["SPX", "Midx", "BLX_0.0" ]:
