@@ -14,6 +14,8 @@ import sys
 import math
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+import pandas as pd
+import numpy as np
 
 class anIndividual:
     def __init__(self, specified_chromosome_length):
@@ -182,7 +184,7 @@ class aSimpleExploratoryAttacker:
             self.population.pop(worst_individual)
             self.population.append(elite_individual)
             
-        elif self.strategy == "SteadyGen-GA":
+        elif self.strategy == "SteadyGen-GA_version_bhargav":
             intermediate = []
             kids = []
             for i in range(self.population_size):
@@ -201,6 +203,22 @@ class aSimpleExploratoryAttacker:
             self.population = intermediate
             self.population.append(best_fit_kid)
 
+
+        elif self.strategy == "SteadyGen-GA_version_Armin":
+            mom, dad = self.tournoment_selection()
+            kid = self.Crossover_operator(mom, dad)
+            kid.calculate_fitness()
+            self.hacker_tracker_x.append(kid.chromosome[0])
+            self.hacker_tracker_y.append(kid.chromosome[1])
+            self.hacker_tracker_z.append(kid.fitness)
+            elite_individual = self.get_best_fit_individual()
+            self.population.remove(elite_individual)
+            worst_individual_random = random.choice(self.population)
+            self.population.remove(worst_individual_random)
+            self.population.append(elite_individual)
+            self.population.append(kid)
+
+
         elif self.strategy == "Mu+Mu":
             elite_individual = self.get_best_fit_individual()
             for i in range(self.population_size):
@@ -214,8 +232,8 @@ class aSimpleExploratoryAttacker:
             for i in range(self.population_size):
                 worst_individual = self.get_worst_fit_individual()
                 self.population.pop(worst_individual)
+        else: raise ValueError('Make sure the strategy is selected correctly')
 
-            
     def print_population(self):
         for i in range(self.population_size):
             self.population[i].print_individual(i)
@@ -228,6 +246,7 @@ class aSimpleExploratoryAttacker:
                 best_fitness = self.population[i].fitness
                 best_individual = i
         print("Best Indvidual: ",str(best_individual)," ", self.population[best_individual].chromosome, " Fitness: ", str(best_fitness))
+        return best_fitness
     
     def plot_evolved_candidate_solutions(self):
         fig = plt.figure()
@@ -246,26 +265,40 @@ lb = -100.0
 MaxEvaluations = 4000
 plot = 0
 
-PopSize = 25
+PopSize = 15
 mu_amt  = 0.01
 
-simple_exploratory_attacker = aSimpleExploratoryAttacker(PopSize,ChromLength,mu_amt,lb,ub, crossover="SPX", strategy="SteadyGen-GA", )
 
-simple_exploratory_attacker.generate_initial_population()
-simple_exploratory_attacker.print_population()
 
-for i in range(MaxEvaluations-PopSize+1):
-    simple_exploratory_attacker.evolutionary_cycle()
-    if (i % PopSize == 0):
-        if (plot == 1):
-            simple_exploratory_attacker.plot_evolved_candidate_solutions()
-        print("At Iteration: " + str(i))
+df = pd.DataFrame(index=[i for i in range(50)], columns=[ "Run", "SPX_best", "SPX_Function_Evaluations","Midx_best", 	"Midx_Function_Evaluations", "BLX_0.0_best", "BLX_0.0_Function_Evaluations"])
+strategy = "Mu+1"
+for k in range(50):
+    df.iloc[k]["Run"] = k
+    for j in ["SPX", "Midx", "BLX_0.0" ]:
+        simple_exploratory_attacker = aSimpleExploratoryAttacker(PopSize,ChromLength,mu_amt,lb,ub, crossover=j, strategy=strategy )
+
+        simple_exploratory_attacker.generate_initial_population()
         simple_exploratory_attacker.print_population()
-    if (simple_exploratory_attacker.get_best_fitness() >= 0.99754):
-        break
 
-print("\nFinal Population\n")
-simple_exploratory_attacker.print_population()
-simple_exploratory_attacker.print_best_max_fitness()
-print("Function Evaluations: " + str(PopSize+i))
-simple_exploratory_attacker.plot_evolved_candidate_solutions()
+        for i in range(MaxEvaluations-PopSize+1):
+            simple_exploratory_attacker.evolutionary_cycle()
+            if (i % PopSize == 0):
+                if (plot == 1):
+                    simple_exploratory_attacker.plot_evolved_candidate_solutions()
+                print("At Iteration: " + str(i))
+                simple_exploratory_attacker.print_population()
+            if (simple_exploratory_attacker.get_best_fitness() >= 0.99754):
+                break
+
+        print("\nFinal Population\n")
+        simple_exploratory_attacker.print_population()
+        best = simple_exploratory_attacker.print_best_max_fitness()
+        print("Function Evaluations: " + str(PopSize+i))
+        simple_exploratory_attacker.plot_evolved_candidate_solutions()
+        df.iloc[k][j+"_best"] = best
+        df.iloc[k][j + "_Function_Evaluations"] = PopSize+i
+
+
+
+print(df)
+df.to_csv(strategy+'.csv', sep=",")
