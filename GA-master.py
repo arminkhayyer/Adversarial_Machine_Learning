@@ -15,10 +15,6 @@ import math
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-#
-#  A Simple Steady-State, Real-Coded Genetic Algorithm       
-#
-    
 class anIndividual:
     def __init__(self, specified_chromosome_length):
         self.chromosome = []
@@ -55,7 +51,6 @@ class aSimpleExploratoryAttacker:
         self.strategy = strategy
         self.crossover = crossover
 
-        
     def generate_initial_population(self):
         for i in range(self.population_size):
             individual = anIndividual(self.chromosome_length)
@@ -148,7 +143,6 @@ class aSimpleExploratoryAttacker:
         return kid
 
     def evolutionary_cycle(self):
-        
         if self.strategy == "SteadyState":
             mom, dad  = self.tournoment_selection()
             worst_individual = self.get_worst_fit_individual()
