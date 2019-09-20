@@ -145,7 +145,24 @@ class aSimpleExploratoryAttacker:
         return kid
 
     def evolutionary_cycle(self):
-        if self.strategy == "SteadyState":
+        
+        if self.strategy == "ElitistGen-GA":
+            population_kids = []
+            elite_individual = self.get_best_fit_individual()
+            for i in range(self.population_size):
+                mom, dad  = self.tournoment_selection()
+                kid = self.Crossover_operator(mom, dad)
+                population_kids.append(kid)
+                kid.calculate_fitness()
+                self.hacker_tracker_x.append(kid.chromosome[0])
+                self.hacker_tracker_y.append(kid.chromosome[1])
+                self.hacker_tracker_z.append(kid.fitness)
+            self.population = population_kids
+            worst_individual = self.get_worst_fit_individual()
+            self.population.pop(worst_individual)
+            self.population.append(elite_individual)
+            
+        elif self.strategy == "SteadyState":
             mom, dad  = self.tournoment_selection()
             worst_individual = self.get_worst_fit_individual()
             self.population.pop(worst_individual)
@@ -167,24 +184,8 @@ class aSimpleExploratoryAttacker:
                 self.hacker_tracker_y.append(kid.chromosome[1])
                 self.hacker_tracker_z.append(kid.fitness)
             self.population.pop(worst_individual)
-        
-        elif self.strategy == "ElitistGen-GA":
-            population_kids = []
-            elite_individual = self.get_best_fit_individual()
-            for i in range(self.population_size):
-                mom, dad  = self.tournoment_selection()
-                kid = self.Crossover_operator(mom, dad)
-                population_kids.append(kid)
-                kid.calculate_fitness()
-                self.hacker_tracker_x.append(kid.chromosome[0])
-                self.hacker_tracker_y.append(kid.chromosome[1])
-                self.hacker_tracker_z.append(kid.fitness)
-            self.population = population_kids
-            worst_individual = self.get_worst_fit_individual()
-            self.population.pop(worst_individual)
-            self.population.append(elite_individual)
             
-        elif self.strategy == "SteadyGen-GA_version_bhargav":
+        elif self.strategy == "SteadyGen-GA_version_Bhargav":
             intermediate = []
             kids = []
             for i in range(self.population_size):
@@ -258,7 +259,35 @@ class aSimpleExploratoryAttacker:
         ax1.set_zlim3d(0.2,1.0)
         plt.show()
 
+def crossover_select(crossover_selector):
+    if crossover_selector == '1':
+        crossover = "SPX"
+        return crossover
+    elif crossover_selector == '2':
+        crossover = "Midx"
+        return crossover
+    elif crossover_selector == '3':
+        crossover = "BLX_0.0"
+        return crossover
+        
+def strategy_select(strategy_selector):
+    if strategy_selector == '1':
+        strategy = "ElitistGen-GA"
+        return strategy
+    elif strategy_selector == '2':
+        strategy = "SteadyState"
+        return strategy
+    elif strategy_selector == '3':
+        strategy = "SteadyGen-GA_version_Armin"
+        return strategy
+    elif strategy_selector == '4':
+        strategy = "Mu+1"
+        return strategy
+    elif strategy_selector == '5':
+        strategy = "Mu+Mu"
+        return strategy
 
+GUI = 1
 ChromLength = 2
 ub = 100.0
 lb = -100.0
@@ -269,36 +298,64 @@ PopSize = 25
 mu_amt  = 0.01
 
 
+if GUI == 0:
+    df = pd.DataFrame(index=[i for i in range(50)], columns=[ "Run", "SPX_best", "SPX_Function_Evaluations","Midx_best", 	"Midx_Function_Evaluations", "BLX_0.0_best", "BLX_0.0_Function_Evaluations"])
+    strategy = "Mu+1"
+    for k in range(50):
+        df.iloc[k]["Run"] = k
+        for j in ["SPX", "Midx", "BLX_0.0" ]:
+            simple_exploratory_attacker = aSimpleExploratoryAttacker(PopSize,ChromLength,mu_amt,lb,ub, crossover=j, strategy=strategy )
+    
+            simple_exploratory_attacker.generate_initial_population()
+            simple_exploratory_attacker.print_population()
+    
+            for i in range(MaxEvaluations-PopSize+1):
+                simple_exploratory_attacker.evolutionary_cycle()
+                if (i % PopSize == 0):
+                    if (plot == 1):
+                        simple_exploratory_attacker.plot_evolved_candidate_solutions()
+                    print("At Iteration: " + str(i))
+                    simple_exploratory_attacker.print_population()
+                if (simple_exploratory_attacker.get_best_fitness() >= 0.99754):
+                    break
+    
+            print("\nFinal Population\n")
+            simple_exploratory_attacker.print_population()
+            best = simple_exploratory_attacker.print_best_max_fitness()
+            print("Function Evaluations: " + str(PopSize+i))
+            simple_exploratory_attacker.plot_evolved_candidate_solutions()
+            df.iloc[k][j+"_best"] = best
+            df.iloc[k][j + "_Function_Evaluations"] = PopSize+i
+    
+    print(df)
+    df.to_csv(strategy+'.csv', sep=",")
 
-df = pd.DataFrame(index=[i for i in range(50)], columns=[ "Run", "SPX_best", "SPX_Function_Evaluations","Midx_best", 	"Midx_Function_Evaluations", "BLX_0.0_best", "BLX_0.0_Function_Evaluations"])
-strategy = "Mu+Mu"
-for k in range(50):
-    df.iloc[k]["Run"] = k
-    for j in ["SPX", "Midx", "BLX_0.0" ]:
-        simple_exploratory_attacker = aSimpleExploratoryAttacker(PopSize,ChromLength,mu_amt,lb,ub, crossover=j, strategy=strategy )
+elif GUI == 1:
+    print("\nSelect crossover method:")
+    print("1. SPX\n2. MPX (Pmp = 1.0)\n3. BLX-0.0")
+    crossover_index = input("Enter the index number from above to choose a crossover method: ") 
 
-        simple_exploratory_attacker.generate_initial_population()
-        simple_exploratory_attacker.print_population()
+    print("\nSelect EC stratagy:")
+    print("1. Elitist Generational GA\n2. Steady-State GA\n3. Steady-Generational GA\n4. Mu+1 (Modified Steady-state)\n5. Mu+Mu")
+    strategy_index = input("Enter the index number from above to choose an evolution stratagy: ")
 
-        for i in range(MaxEvaluations-PopSize+1):
-            simple_exploratory_attacker.evolutionary_cycle()
-            if (i % PopSize == 0):
-                if (plot == 1):
-                    simple_exploratory_attacker.plot_evolved_candidate_solutions()
-                print("At Iteration: " + str(i))
-                simple_exploratory_attacker.print_population()
-            if (simple_exploratory_attacker.get_best_fitness() >= 0.99754):
-                break
-
-        print("\nFinal Population\n")
-        simple_exploratory_attacker.print_population()
-        best = simple_exploratory_attacker.print_best_max_fitness()
-        print("Function Evaluations: " + str(PopSize+i))
-        simple_exploratory_attacker.plot_evolved_candidate_solutions()
-        df.iloc[k][j+"_best"] = best
-        df.iloc[k][j + "_Function_Evaluations"] = PopSize+i
-
-
-
-print(df)
-df.to_csv(strategy+'.csv', sep=",")
+    simple_exploratory_attacker = aSimpleExploratoryAttacker(PopSize,ChromLength,mu_amt,lb,ub, crossover=crossover_select(crossover_selector=crossover_index), strategy=strategy_select(strategy_selector=strategy_index), )
+    
+    simple_exploratory_attacker.generate_initial_population()
+    simple_exploratory_attacker.print_population()
+    
+    for i in range(MaxEvaluations-PopSize+1):
+        simple_exploratory_attacker.evolutionary_cycle()
+        if (i % PopSize == 0):
+            if (plot == 1):
+                simple_exploratory_attacker.plot_evolved_candidate_solutions()
+            print("At Iteration: " + str(i))
+            simple_exploratory_attacker.print_population()
+        if (simple_exploratory_attacker.get_best_fitness() >= 0.99754):
+            break
+    
+    print("\nFinal Population\n")
+    simple_exploratory_attacker.print_population()
+    simple_exploratory_attacker.print_best_max_fitness()
+    print("Function Evaluations: " + str(PopSize+i))
+    simple_exploratory_attacker.plot_evolved_candidate_solutions()
