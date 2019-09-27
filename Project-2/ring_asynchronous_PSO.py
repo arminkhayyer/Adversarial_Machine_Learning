@@ -130,13 +130,13 @@ class PSO:
         if self.sync_update == "asynchronous":
             for i, particle in enumerate(self.Swarm):
                 best_neighbour = self.find_best_neghibour(i)
-                self.Swarm[i].calculate_velocity(best_neighbour, self.cognitive_rate, self.social_rate)
                 particle.calculate_new_position()
                 particle.calculate_fitness()
                 particle.find_best_position()
                 self.hacker_tracker_x.append(particle.position[0])
                 self.hacker_tracker_y.append(particle.position[1])
                 self.hacker_tracker_z.append(particle.current_fitness)
+                self.Swarm[i].calculate_velocity(best_neighbour, self.cognitive_rate, self.social_rate)
 
 
     def print_population(self):
