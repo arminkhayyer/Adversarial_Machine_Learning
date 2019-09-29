@@ -207,8 +207,8 @@ lb = -100.0
 MaxEvaluations = 4000
 plot = 0
 swarm_size = 100
-total_runs = 50
-fails = 0
+total_runs = 30
+fail = 0
 
 GUI_operation_begin = GUI_operation()
 GUI_operation_begin.print_list()
@@ -241,8 +241,8 @@ while runs < total_runs:
         df.iloc[runs]["Function_Evaluations"] = swarm_size + i
         runs = runs + 1
     else:
-        fails = fails + 1
+        fail = fail + 1
     
 print(df)
-print("Totals fails = "+ str(fails))
+print("Totals fails = "+ str(fail))
 df.to_csv(topology+'_'+sync_method+'.csv', sep=",")
