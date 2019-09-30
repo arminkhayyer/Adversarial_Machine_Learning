@@ -207,7 +207,7 @@ lb = -100.0
 MaxEvaluations = 4000
 plot = 0
 swarm_size = 100
-total_runs = 30
+total_runs = 1              #Change the number of runs for more than one consecutive runs
 fail = 0
 
 GUI_operation_begin = GUI_operation()
@@ -235,14 +235,14 @@ while runs < total_runs:
     simple_PSO.print_population()
     simple_PSO.print_best_max_fitness()
     print("Function Evaluations: " + str(swarm_size + i))
-    #simple_PSO.plot_evolved_candidate_solutions()
+    simple_PSO.plot_evolved_candidate_solutions()                       #Advised to comment this line if running code multiple times
     if (swarm_size + i) < 4000:
         df.iloc[runs]["Run"] = runs + 1
         df.iloc[runs]["Function_Evaluations"] = swarm_size + i
         runs = runs + 1
     else:
         fail = fail + 1
-    
+print("\nThe final data frame\n")   
 print(df)
 print("Totals fails = "+ str(fail))
 df.to_csv(topology+'_'+sync_method+'.csv', sep=",")
