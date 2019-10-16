@@ -29,5 +29,3 @@ for i in range(size):
 
 print(df)
 df.to_csv("Project3_Dataset_v2.txt", sep=' ', header=None, index=False)
-#for i in range(size):
-#    print(str(col_3[i]) + '\t' + str(new_col_3[i]))
