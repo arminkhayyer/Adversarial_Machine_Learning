@@ -71,7 +71,7 @@ class RBFNet(object):
         else:
             # use a fixed std
             self.centers = rand_cluster(X, self.k)
-            self.centers = kohonen_unsupervised(X, self.k)
+            self.centers, _ = kohonen_unsupervised(X, self.k)
 
             dMax = max([np.linalg.norm(c1 - c2) for c1 in self.centers for c2 in self.centers])
             self.stds = np.repeat(dMax / np.sqrt(2 * self.k), self.k)
@@ -144,5 +144,3 @@ print("Accuracy:  ", accuracy)
 print("Recall:    ", recall)
 print("Precision: ", precision)
 print("F1:        ", f1)
-
-
