@@ -40,12 +40,15 @@ def kohonen_unsupervised(X, k):
             centers[idx_center] = centers[idx_center] + 0.5 * (X[j, :] - centers[idx_center])
 
     sigma = []
-    print(X.shape)
-    print(centers[0].shape)
-    print(X - centers[0].reshape(2, ))
+
     for i in range(k):
-        sigma.append(np.linalg.norm(X, centers[i].reshape(centers[i].shape[1], )) / math.sqrt(20))
-    return centers
+        dist = (X - centers[i]) ** 2
+        dist = np.sum(dist, axis=1)
+        dist_max = max(np.sqrt(dist))
+        print(max(dist))
+        sigma.append(dist_max / math.sqrt(20))
+
+    return centers, sigma
 
 
 class RBFNet(object):
@@ -64,10 +67,9 @@ class RBFNet(object):
     def fit(self, X, y):
         if self.inferStds:
             # compute stds from data
-            self.centers, self.stds = kmeans(X, self.k)
+            self.centers, self.stds = kohonen_unsupervised(X, self.k)
         else:
             # use a fixed std
-            # self.centers, _ = kmeans(X, self.k)
             self.centers = rand_cluster(X, self.k)
             self.centers = kohonen_unsupervised(X, self.k)
 
@@ -114,7 +116,7 @@ y_test = x_[train:, 2]
 
 
 
-rbfnet = RBFNet(lr=1e-4, k=10, inferStds=False)
+rbfnet = RBFNet(lr=1e-4, k=100, inferStds=False)
 rbfnet.fit(x_train, y_train)
 
 y_pred = rbfnet.predict(x_test)
