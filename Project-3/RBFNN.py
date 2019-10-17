@@ -32,21 +32,21 @@ def kohonen_unsupervised(X, k):
 
     for i in range(k):
         centers.append(np.random.uniform(X.min(), X.max(), (1, 2)))
-    print(centers)
 
+    clusters = [-1] * X.shape[0]
     for num_iter in range(10):
         for j in range(X.shape[0]):
             idx_center = find_closest(centers, X[j, :])
+            clusters[j] = idx_center
             centers[idx_center] = centers[idx_center] + 0.5 * (X[j, :] - centers[idx_center])
 
     sigma = []
 
     for i in range(k):
-        dist = (X - centers[i]) ** 2
+        idx = [m for m, e in enumerate(clusters) if e == i]
+        dist = (X[idx,:] - centers[i]) ** 2
         dist = np.sum(dist, axis=1)
-        dist_max = max(np.sqrt(dist))
-        print(max(dist))
-        sigma.append(dist_max / math.sqrt(20))
+        sigma.append(np.std(np.sqrt(dist)))
 
     return centers, sigma
 
