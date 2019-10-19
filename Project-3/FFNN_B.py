@@ -32,7 +32,7 @@ class aFFNeuralNetwork:
         self.pred_test = []
         
     def readData(self):
-        dataset = pd.read_csv("Project3_Dataset_v1.txt",sep=' ', header=None)
+        dataset = pd.read_csv(self.filename, sep=' ', header=None)
         DS_array = dataset.to_numpy()
         X = DS_array[:,0:2]
         y = DS_array[:,2]
@@ -91,8 +91,8 @@ class aFFNeuralNetwork:
         precision = tp / (tp + fp + 0.00001)
         f1 = 2 * (precision * recall) / (precision + recall + 0.00001)
         
-        self.Plotter(self.X_test[:,0], self.X_test[:,1], self.y_test, "Test-set")
-        self.Plotter(self.X_test[:,0], self.X_test[:,1], self.pred_test, "Test-set")
+        self.Plotter(self.X_test[:,0], self.X_test[:,1], self.y_test, "Actual")
+        self.Plotter(self.X_test[:,0], self.X_test[:,1], self.pred_test, "Predicted")
         print("Training MSE: ", MSE_train)
         print("Testing MSE:  ", MSE_test)
         print("Accuracy:     ", accuracy)
