@@ -3,12 +3,8 @@ import matplotlib.pyplot as plt
 
 import math
 
-
 def rbf(x, c, s):
     return np.exp(-1 / (2 * s ** 2) * (np.linalg.norm(x - c)) ** 2)
-
-
-
 
 def rand_cluster(X, k):
     centers = np.random.choice(range(X.shape[0]), size=k)
@@ -18,14 +14,12 @@ def rand_cluster(X, k):
         a.append(X[i])
     return a
 
-
 def find_closest(centers, x):
     dist = []
     for i, center in enumerate(centers):
         dist.append(np.linalg.norm(center - x))
 
     return int(np.argmax(np.array(dist)))
-
 
 def kohonen_unsupervised(X, k):
     centers = []
@@ -39,7 +33,6 @@ def kohonen_unsupervised(X, k):
             idx_center = find_closest(centers, X[j, :])
             clusters[j] = idx_center
             centers[idx_center] = centers[idx_center] + 0.5 * (X[j, :] - centers[idx_center])
-
     sigma = []
 
     for i in range(k):
@@ -49,7 +42,6 @@ def kohonen_unsupervised(X, k):
         sigma.append(np.std(np.sqrt(dist)))
 
     return centers, sigma
-
 
 class RBFNet(object):
     """Implementation of a Radial Basis Function Network"""
@@ -101,8 +93,6 @@ class RBFNet(object):
             y_pred.append(F)
         return np.array(y_pred)
 
-
-
 x_ = np.loadtxt('Project3_Dataset_v1.txt')
 train = math.floor(0.7 * x_.shape[0])
 eval = math.floor(.8 * x_.shape[0])
@@ -113,7 +103,6 @@ y_train = x_[:train, 2]
 
 x_test = x_[train:, 0:2]
 y_test = x_[train:, 2]
-
 
 
 rbfnet = RBFNet(lr=1e-4, k=100, inferStds=False)
@@ -135,6 +124,24 @@ for test_instance_result, label in zip(y_pred, y_test):
         fp += 1
     if ((test_instance_result <= 0.5) and (label > 0.5)):
         fn += 1
+
+fig = plt.figure()
+ax1 = fig.add_subplot(1, 1, 1, projection='3d')
+ax1.scatter(x_test[:,0], x_test[:,1], y_test)
+plt.title("Evolved Candidate Solutions")
+ax1.set_xlim3d(-100.0, 100.0)
+ax1.set_ylim3d(-100.0, 100.0)
+ax1.set_zlim3d(-2.0, 2.0)
+plt.show()
+
+fig1 = plt.figure()
+ax1 = fig1.add_subplot(1, 1, 1, projection='3d')
+ax1.scatter(x_test[:,0], x_test[:,1], y_pred)
+plt.title("Evolved Candidate Solutions")
+ax1.set_xlim3d(-100.0, 100.0)
+ax1.set_ylim3d(-100.0, 100.0)
+ax1.set_zlim3d(-2.0, 2.0)
+plt.show()
 
 accuracy = (tp + tn) / (tp + tn + fp + fn)
 recall = tp / (tp + fn + 0.00001)

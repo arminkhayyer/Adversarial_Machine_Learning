@@ -18,7 +18,6 @@ y_test = x_[train:, 2]
 
 kernel='rbf'
 
-
 if kernel =='linear':
     clf = LinearSVC(random_state=0, tol=1e-4)
 
@@ -43,6 +42,24 @@ for test_instance_result, label in zip(y_pred, y_test):
         fp += 1
     if ((test_instance_result <= 0.5) and (label > 0.5)):
         fn += 1
+
+fig = plt.figure()
+ax1 = fig.add_subplot(1, 1, 1, projection='3d')
+ax1.scatter(x_test[:,0], x_test[:,1], y_test)
+plt.title("Evolved Candidate Solutions")
+ax1.set_xlim3d(-100.0, 100.0)
+ax1.set_ylim3d(-100.0, 100.0)
+ax1.set_zlim3d(-2.0, 2.0)
+plt.show()
+
+fig1 = plt.figure()
+ax1 = fig1.add_subplot(1, 1, 1, projection='3d')
+ax1.scatter(x_test[:,0], x_test[:,1], y_pred)
+plt.title("Evolved Candidate Solutions")
+ax1.set_xlim3d(-100.0, 100.0)
+ax1.set_ylim3d(-100.0, 100.0)
+ax1.set_zlim3d(-2.0, 2.0)
+plt.show()
 
 accuracy = (tp + tn) / (tp + tn + fp + fn)
 recall = tp / (tp + fn + 0.00001)
