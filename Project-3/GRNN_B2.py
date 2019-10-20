@@ -301,6 +301,15 @@ class aSimpleExploratoryAttacker:
             if (self.population[i].fitness < worst_fitness):
                 worst_fitness = self.population[i].fitness
                 worst_individual = i
+
+            elif (self.population[i].fitness == worst_fitness):
+                if sum(self.population[i].chromosome[1:]) > sum(self.population[worst_individual].chromosome[1:]):
+                    worst_fitness = self.population[i].fitness
+                    worst_individual = i
+                elif sum(self.population[i].chromosome[1:]) == sum(self.population[worst_individual].chromosome[1:]):
+                    if self.population[i].mse > self.population[worst_individual].mse:
+                        worst_fitness = self.population[i].fitness
+                        worst_individual = i
         return worst_individual
 
     def get_best_fitness(self):
@@ -337,10 +346,42 @@ class aSimpleExploratoryAttacker:
     def tournoment_selection(self, k=2):
         tournoment_output1 = random.choices(self.population, k=k)
         best_indivisual1 = [i.fitness for i in tournoment_output1]
-        parent1 = tournoment_output1[best_indivisual1.index(max(best_indivisual1))]
+        if best_indivisual1[0] > best_indivisual1[1]:
+            parent1 = tournoment_output1[0]
+        elif best_indivisual1[0] == best_indivisual1[1]:
+            if sum(tournoment_output1[0].chromosome[1:]) < sum(tournoment_output1[1].chromosome[1:]):
+                parent1 = tournoment_output1[0]
+            elif sum(tournoment_output1[0].chromosome[1:]) == sum(tournoment_output1[1].chromosome[1:]):
+                if tournoment_output1[0].mse < tournoment_output1[1].mse:
+                    parent1 = tournoment_output1[0]
+                else:
+                    parent1 = tournoment_output1[1]
+            else:
+                parent1 = tournoment_output1[1]
+        else:
+            parent1 = tournoment_output1[1]
+
+        #parent1 = tournoment_output1[best_indivisual1.index(max(best_indivisual1))]
+
         tournoment_output2 = random.choices(self.population, k=k)
         best_indivisual2 = [i.fitness for i in tournoment_output2]
-        parent2 = tournoment_output2[best_indivisual2.index(max(best_indivisual2))]
+        if best_indivisual2[0] > best_indivisual2[1]:
+            parent2 = tournoment_output2[0]
+        elif best_indivisual2[0] == best_indivisual2[1]:
+            if sum(tournoment_output2[0].chromosome[1:]) < sum(tournoment_output2[1].chromosome[1:]):
+                parent2 = tournoment_output2[0]
+            elif sum(tournoment_output2[0].chromosome[1:]) == sum(tournoment_output2[1].chromosome[1:]):
+                if tournoment_output2[0].mse < tournoment_output2[1].mse:
+                    parent2 = tournoment_output2[0]
+                else:
+                    parent2 = tournoment_output2[1]
+            else:
+                parent2 = tournoment_output2[1]
+        else:
+            parent2 = tournoment_output2[1]
+
+
+        # parent2 = tournoment_output2[best_indivisual2.index(max(best_indivisual2))]
         return parent1, parent2
 
     def Crossover_operator(self, mom, dad):
@@ -410,7 +451,7 @@ df = pd.read_csv("Project3_Dataset_v1.txt", sep=" ", names=["x", "y", "z"])
 ChromLength = 1 + math.floor(0.7 * len(df))  + 1
 ub = 100
 lb = .1
-MaxEvaluations = 200
+MaxEvaluations = 500
 plot = 0
 
 PopSize = 50
