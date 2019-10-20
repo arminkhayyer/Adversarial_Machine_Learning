@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53a11553-8514-4f78-873a-a450f6cf6d47" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Project-3/GRNN_A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project-3/GRNN_B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project-3/GRNN_B2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-2/Master-PSO.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project-2/Master-PSO.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-2/Report-paper.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-2/ring_asynchronous.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Project-2/ring_asynchronous.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-2/ring_synchronous.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Project-2/ring_synchronous.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-2/star_asynchronous.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Project-2/star_asynchronous.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-2/star_synchronous.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Project-2/star_synchronous.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/GRNN_A.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/GRNN_A.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,19 +16,23 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Adversarial_m$Master_PSO.coverage" NAME="Master-PSO Coverage Results" MODIFIED="1570568158417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-2" />
+    <SUITE FILE_PATH="coverage/Adversarial_m$GRNN_B.coverage" NAME="GRNN_B Coverage Results" MODIFIED="1571535645462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
     <SUITE FILE_PATH="coverage/Adversarial_m$steady_stateGA.coverage" NAME="steady_stateGA Coverage Results" MODIFIED="1568650851817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Adversarial_m$FFNN_B.coverage" NAME="FFNN_B Coverage Results" MODIFIED="1571529764014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
     <SUITE FILE_PATH="coverage/Adversarial_m$simpleNeuralNetworkv__2_.coverage" NAME="simpleNeuralNetworkv (2) Coverage Results" MODIFIED="1571045102291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
     <SUITE FILE_PATH="coverage/Adversarial_m$ring_synchronous_PSO.coverage" NAME="ring_synchronous_PSO Coverage Results" MODIFIED="1569578861335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-2" />
     <SUITE FILE_PATH="coverage/Adversarial_m$GA_master.coverage" NAME="GA-master Coverage Results" MODIFIED="1568879721293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Adversarial_m$GRNN_A.coverage" NAME="GRNN_A Coverage Results" MODIFIED="1571069512958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
+    <SUITE FILE_PATH="coverage/Adversarial_m$GRNN_A.coverage" NAME="GRNN_A Coverage Results" MODIFIED="1571549040204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
+    <SUITE FILE_PATH="coverage/Adversarial_m$RBFNN.coverage" NAME="RBFNN Coverage Results" MODIFIED="1571529677593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
+    <SUITE FILE_PATH="coverage/Adversarial_m$GRNN_B2.coverage" NAME="GRNN_B2 Coverage Results" MODIFIED="1571556446280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="GRNN_A.py" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="GRNN_A.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project-3/GRNN_A.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
+            <state relative-caret-position="253">
+              <caret line="402" column="7" selection-start-line="402" selection-start-column="7" selection-end-line="402" selection-end-column="7" />
               <folding>
                 <element signature="e#177#186#0" expanded="true" />
               </folding>
@@ -40,14 +40,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="simpleNeuralNetworkv (2).py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project-3/simpleNeuralNetworkv (2).py">
+      <file leaf-file-name="GRNN_B2.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Project-3/GRNN_B2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="202" column="20" lean-forward="true" selection-start-line="202" selection-start-column="20" selection-end-line="202" selection-end-column="20" />
-              <folding>
-                <element signature="e#91#100#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="176">
+              <caret line="412" column="20" selection-start-line="412" selection-start-column="20" selection-end-line="412" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GRNN_B.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project-3/GRNN_B.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="203" column="55" selection-start-line="203" selection-start-column="45" selection-end-line="203" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GA-master.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project-1/GA-master.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="121" column="47" lean-forward="true" selection-start-line="111" selection-start-column="12" selection-end-line="121" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -64,6 +79,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>train</find>
+      <find>mask</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -76,7 +93,9 @@
         <option value="$PROJECT_DIR$/GA-master.py" />
         <option value="$PROJECT_DIR$/Project-2/ring_synchronous_PSO.py" />
         <option value="$PROJECT_DIR$/Project-2/Master-PSO.py" />
+        <option value="$PROJECT_DIR$/Project-3/GRNN_B.py" />
         <option value="$PROJECT_DIR$/Project-3/GRNN_A.py" />
+        <option value="$PROJECT_DIR$/Project-3/GRNN_B2.py" />
       </list>
     </option>
   </component>
@@ -105,7 +124,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,17 +134,13 @@
             <path>
               <item name="Adversarial_m" type="b2602c69:ProjectViewProjectNode" />
               <item name="Adversarial_m" type="462c0819:PsiDirectoryNode" />
-              <item name="Project-1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Adversarial_m" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Adversarial_m" type="462c0819:PsiDirectoryNode" />
               <item name="Project-3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -137,6 +151,9 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Project-3" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -153,8 +170,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.GRNN_A">
-    <configuration name="GA-master" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.GRNN_B2">
+    <configuration name="FFNN_B" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Adversarial_m" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -162,12 +179,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project-3" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GA-master.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project-3/FFNN_B.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -192,45 +209,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Master-PSO" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Adversarial_m" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project-2" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project-2/Master-PSO.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="ring_synchronous_PSO" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Adversarial_m" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project-2" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project-2/ring_synchronous_PSO.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="simpleNeuralNetworkv (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="GRNN_B" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Adversarial_m" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -243,26 +222,64 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project-3/simpleNeuralNetworkv (2).py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project-3/GRNN_B.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="GRNN_B2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Adversarial_m" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project-3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project-3/GRNN_B2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="RBFNN" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Adversarial_m" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project-3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project-3/RBFNN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.GA-master" />
-      <item itemvalue="Python.ring_synchronous_PSO" />
-      <item itemvalue="Python.Master-PSO" />
       <item itemvalue="Python.GRNN_A" />
-      <item itemvalue="Python.simpleNeuralNetworkv (2)" />
+      <item itemvalue="Python.RBFNN" />
+      <item itemvalue="Python.FFNN_B" />
+      <item itemvalue="Python.GRNN_B" />
+      <item itemvalue="Python.GRNN_B2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.GRNN_B2" />
         <item itemvalue="Python.GRNN_A" />
-        <item itemvalue="Python.simpleNeuralNetworkv (2)" />
-        <item itemvalue="Python.Master-PSO" />
-        <item itemvalue="Python.ring_synchronous_PSO" />
-        <item itemvalue="Python.GA-master" />
+        <item itemvalue="Python.GRNN_B" />
+        <item itemvalue="Python.FFNN_B" />
+        <item itemvalue="Python.RBFNN" />
       </list>
     </recent_temporary>
   </component>
@@ -296,19 +313,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39757577" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35636362" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.28727272" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3204578" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21101573" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.25107297" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.23247497" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -332,6 +348,26 @@
     <option name="LAST_COMMIT_MESSAGE" value="initial" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Project-3/GRNN_A.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3060">
+          <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
+          <folding>
+            <element signature="e#177#186#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-3/simpleNeuralNetworkv (2).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2910">
+          <caret line="202" column="20" lean-forward="true" selection-start-line="202" selection-start-column="20" selection-end-line="202" selection-end-column="20" />
+          <folding>
+            <element signature="e#91#100#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Project-1/steady_stateGA.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2700">
@@ -398,33 +434,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project-1/GA-master.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="30" column="30" selection-end-line="360" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project-3/Project3_Dataset_v1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project-3/simpleNeuralNetworkv (2).py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="202" column="20" lean-forward="true" selection-start-line="202" selection-start-column="20" selection-end-line="202" selection-end-column="20" />
+        <state relative-caret-position="2910">
+          <caret line="202" column="20" selection-start-line="202" selection-start-column="20" selection-end-line="202" selection-end-column="20" />
           <folding>
             <element signature="e#91#100#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Project-3/RBFNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-822">
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-3/SVM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-3/FFNN_B.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1034">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#132#143#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-1/GA-master.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="121" column="47" lean-forward="true" selection-start-line="111" selection-start-column="12" selection-end-line="121" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Project-3/GRNN_A.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
+        <state relative-caret-position="253">
+          <caret line="402" column="7" selection-start-line="402" selection-start-column="7" selection-end-line="402" selection-end-column="7" />
           <folding>
             <element signature="e#177#186#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-3/GRNN_B.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="203" column="55" selection-start-line="203" selection-start-column="45" selection-end-line="203" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-3/GRNN_B2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="412" column="20" selection-start-line="412" selection-start-column="20" selection-end-line="412" selection-end-column="20" />
         </state>
       </provider>
     </entry>
