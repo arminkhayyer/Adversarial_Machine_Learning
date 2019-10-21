@@ -150,7 +150,7 @@ class aSimpleNeuralNetwork:
         for test_case in self.test_set:
             test_instance_result = self.check(test_case[:2])
             sum_squared_error += (test_instance_result - test_case[2]) ** 2
-            sum_squared_error = (sum_squared_error / len(self.test_set))
+
             if ((test_instance_result > 0.5) and (test_case[2] > 0.5)):
                 self.tp_test += 1
             if ((test_instance_result <= 0.5) and (test_case[2] <= 0.5)):
@@ -159,10 +159,17 @@ class aSimpleNeuralNetwork:
                 self.fp_test += 1
             if ((test_instance_result <= 0.5) and (test_case[2] > 0.5)):
                 self.fn_test += 1
+        sum_squared_error = (sum_squared_error / len(self.test_set))
+        print("mse:", sum_squared_error)
         accuracy = (self.tp_test + self.tn_test) / (self.tp_test + self.tn_test + self.fp_test + self.fn_test)
         recall = self.tp_test / (self.tp_test + self.fn_test + 0.00001)
         precision = self.tp_test / (self.tp_test + self.fp_test + 0.00001)
         f1 = 2 * (precision * recall) / (precision + recall + 0.00001)
+        print("Accuracy:  ", accuracy)
+        print("Recall:    ", recall)
+        print("Precision: ", precision)
+        print("F1:        ", f1)
+        print("sigma", self.sigma)
         return accuracy
 
     def calculate_statistics(self, test_instance_result, SchafferF6):
@@ -479,3 +486,16 @@ print("Function Evaluations: " + str(PopSize + i))
 simple_exploratory_attacker.plot_evolved_candidate_solutions()
 print( "validation", simple_exploratory_attacker.best_fit_validation.chromosome[0], simple_exploratory_attacker.best_fit_validation.fitness_validation)
 print( "test", simple_exploratory_attacker.best_fit_validation.chromosome[0], simple_exploratory_attacker.best_fit_validation.fitness_test)
+
+
+
+simple_neural_network = aSimpleNeuralNetwork("Project3_Dataset_v1.txt", 2, 1, simple_exploratory_attacker.best_fit_validation.chromosome[1:])
+simple_neural_network.train()
+simple_neural_network.set_sigma(simple_exploratory_attacker.best_fit_validation.chromosome[0])
+mse = simple_neural_network.test_model()
+print("Model Test AMSE: ", mse )
+fitness = simple_neural_network.print_statistics()
+fitness_validation = simple_neural_network.test_model_validation()
+print("test results")
+print(sum(simple_exploratory_attacker.best_fit_validation.chromosome[1:]))
+fitness_test = simple_neural_network.test_model_test()

@@ -178,5 +178,8 @@ fit2 =  np.sort(np.array(df_given["z"]))
 print(stats.ttest_ind(fit1, fit2))
 print(fit1, fit2)
 plt.plot(fit1, fit2)
+plt.xlabel("Given dataset")
+plt.ylabel("Generated dataset")
+plt.title("QQ plot for Z value")
 plt.show()
 

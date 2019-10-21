@@ -197,7 +197,7 @@ dg.generate_dataset(1000)
 simple_neural_network = aSimpleNeuralNetwork("dataset.txt",2,1)
 
 simple_neural_network.train()
-simple_neural_network.set_sigma(10)
+simple_neural_network.set_sigma(.10)
 
 print("Model Test AMSE: ", simple_neural_network.test_model(1000))
 simple_neural_network.print_statistics()
