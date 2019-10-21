@@ -35,7 +35,7 @@ class aGaussianKernel:
 
 
 class aSimpleNeuralNetwork:
-    def __init__(self, dataset_file_name, num_of_inputs, num_of_outputs):
+    def __init__(self, dataset_file_name, num_of_inputs, num_of_outputs, mask):
         self.filename = dataset_file_name
         self.num_of_inputs = num_of_inputs
         self.num_of_outputs = num_of_outputs
@@ -58,13 +58,14 @@ class aSimpleNeuralNetwork:
 
 
 
-
         df = pd.read_csv(self.filename, sep=" ", names=["x", "y", "z"])
         df = df.sample(n=len(df), random_state=42)
         train = math.floor(0.7 * len(df)) +1
         eval = math.floor(.8 * len(df)) +1
         test = math.floor(.9 * len(df)) +1
         df_train = df[:train]
+        df_train = df_train[mask]
+        print(len(df_train))
         df_eval = df[train:eval]
         df_valid = df[eval:test]
         df_test = df[test:]
@@ -149,6 +150,7 @@ class aSimpleNeuralNetwork:
         for test_case in self.test_set:
             test_instance_result = self.check(test_case[:2])
             sum_squared_error += (test_instance_result - test_case[2]) ** 2
+
             if ((test_instance_result > 0.5) and (test_case[2] > 0.5)):
                 self.tp_test += 1
             if ((test_instance_result <= 0.5) and (test_case[2] <= 0.5)):
@@ -252,13 +254,13 @@ class anIndividual:
         self.mse = 0
         self.chromosome_length = specified_chromosome_length
 
-
     def randomly_generate(self, lb, ub):
-        for i in range(self.chromosome_length):
-            self.chromosome.append(random.uniform(lb, ub))
+        self.chromosome.append(random.uniform(lb, ub))
+        for i in range(1, self.chromosome_length):
+            self.chromosome.append(random.choice([True, False, True]))
 
     def calculate_fitness(self):
-        simple_neural_network = aSimpleNeuralNetwork("Project3_Dataset_v1.txt", 2, 1)
+        simple_neural_network = aSimpleNeuralNetwork("Project3_Dataset_v1.txt", 2, 1, self.chromosome[1:])
         simple_neural_network.train()
         simple_neural_network.set_sigma(self.chromosome[0])
         self.mse = simple_neural_network.test_model()
@@ -269,7 +271,7 @@ class anIndividual:
 
 
     def print_individual(self, i):
-        print("Chromosome " + str(i) + ": " + str(self.chromosome) + " Fitness: " + str(self.fitness), " Fitness validation: " + str(self.fitness_validation) )
+        print("Chromosome " + str(i) + ": " + str(self.chromosome[0]) + " Fitness: " + str(self.fitness), " Fitness validation: " + str(self.fitness_validation) )
 
 
 class aSimpleExploratoryAttacker:
@@ -306,6 +308,15 @@ class aSimpleExploratoryAttacker:
             if (self.population[i].fitness < worst_fitness):
                 worst_fitness = self.population[i].fitness
                 worst_individual = i
+
+            elif (self.population[i].fitness == worst_fitness):
+                if sum(self.population[i].chromosome[1:]) > sum(self.population[worst_individual].chromosome[1:]):
+                    worst_fitness = self.population[i].fitness
+                    worst_individual = i
+                elif sum(self.population[i].chromosome[1:]) == sum(self.population[worst_individual].chromosome[1:]):
+                    if self.population[i].mse > self.population[worst_individual].mse:
+                        worst_fitness = self.population[i].fitness
+                        worst_individual = i
         return worst_individual
 
     def get_best_fitness(self):
@@ -342,23 +353,60 @@ class aSimpleExploratoryAttacker:
     def tournoment_selection(self, k=2):
         tournoment_output1 = random.choices(self.population, k=k)
         best_indivisual1 = [i.fitness for i in tournoment_output1]
-        parent1 = tournoment_output1[best_indivisual1.index(max(best_indivisual1))]
+        if best_indivisual1[0] > best_indivisual1[1]:
+            parent1 = tournoment_output1[0]
+        elif best_indivisual1[0] == best_indivisual1[1]:
+            if sum(tournoment_output1[0].chromosome[1:]) < sum(tournoment_output1[1].chromosome[1:]):
+                parent1 = tournoment_output1[0]
+            elif sum(tournoment_output1[0].chromosome[1:]) == sum(tournoment_output1[1].chromosome[1:]):
+                if tournoment_output1[0].mse < tournoment_output1[1].mse:
+                    parent1 = tournoment_output1[0]
+                else:
+                    parent1 = tournoment_output1[1]
+            else:
+                parent1 = tournoment_output1[1]
+        else:
+            parent1 = tournoment_output1[1]
+
+        #parent1 = tournoment_output1[best_indivisual1.index(max(best_indivisual1))]
+
         tournoment_output2 = random.choices(self.population, k=k)
         best_indivisual2 = [i.fitness for i in tournoment_output2]
-        parent2 = tournoment_output2[best_indivisual2.index(max(best_indivisual2))]
+        if best_indivisual2[0] > best_indivisual2[1]:
+            parent2 = tournoment_output2[0]
+        elif best_indivisual2[0] == best_indivisual2[1]:
+            if sum(tournoment_output2[0].chromosome[1:]) < sum(tournoment_output2[1].chromosome[1:]):
+                parent2 = tournoment_output2[0]
+            elif sum(tournoment_output2[0].chromosome[1:]) == sum(tournoment_output2[1].chromosome[1:]):
+                if tournoment_output2[0].mse < tournoment_output2[1].mse:
+                    parent2 = tournoment_output2[0]
+                else:
+                    parent2 = tournoment_output2[1]
+            else:
+                parent2 = tournoment_output2[1]
+        else:
+            parent2 = tournoment_output2[1]
+
+
+        # parent2 = tournoment_output2[best_indivisual2.index(max(best_indivisual2))]
         return parent1, parent2
 
     def Crossover_operator(self, mom, dad):
         kid = anIndividual(self.chromosome_length)
         kid.randomly_generate(self.lb, self.ub)
-        for j in range(self.chromosome_length):
-            mean = (mom.chromosome[j] + dad.chromosome[j])/2
-            std = np.std(np.array([mom.chromosome[j],dad.chromosome[j] ]))
-            kid.chromosome[j] = mean + std * random.normalvariate(0, 1)
-            if kid.chromosome[j] > self.ub:
-                kid.chromosome[j] = self.ub
-            if kid.chromosome[j] < self.lb:
-                kid.chromosome[j] = self.lb
+        mean = (mom.chromosome[0] + dad.chromosome[0]) / 2
+        std = np.std(np.array([mom.chromosome[0], dad.chromosome[0]]))
+        kid.chromosome[0] = mean + std * random.normalvariate(0, 1)
+        if kid.chromosome[0] > self.ub:
+            kid.chromosome[0] = self.ub
+        if kid.chromosome[0] < self.lb:
+            kid.chromosome[0] = self.lb
+        single_point = random.randint(2, self.chromosome_length - 1)
+        for j in range(1, self.chromosome_length):
+            if j <= single_point:
+                kid.chromosome[j] = mom.chromosome[j]
+            else:
+                kid.chromosome[j] = dad.chromosome[j]
         return kid
 
 
@@ -391,7 +439,7 @@ class aSimpleExploratoryAttacker:
             if self.population[i].fitness > best_fitness:
                 best_fitness = self.population[i].fitness
                 best_individual = i
-        print("Best Indvidual: ", str(best_individual), " ", self.population[best_individual].chromosome, " Fitness: ",
+        print("Best Indvidual: ", str(best_individual), " ", self.population[best_individual].chromosome[0], " Fitness: ",
               str(best_fitness))
         return best_fitness
 
@@ -405,7 +453,9 @@ class aSimpleExploratoryAttacker:
         plt.show()
 
 
-ChromLength = 1
+
+df = pd.read_csv("Project3_Dataset_v1.txt", sep=" ", names=["x", "y", "z"])
+ChromLength = 1 + math.floor(0.7 * len(df))  + 1
 ub = 100
 lb = .1
 MaxEvaluations = 500
@@ -434,14 +484,12 @@ simple_exploratory_attacker.print_population()
 simple_exploratory_attacker.print_best_max_fitness()
 print("Function Evaluations: " + str(PopSize + i))
 simple_exploratory_attacker.plot_evolved_candidate_solutions()
-print( "validation", simple_exploratory_attacker.best_fit_validation.chromosome, simple_exploratory_attacker.best_fit_validation.fitness_validation)
-print( "test", simple_exploratory_attacker.best_fit_validation.chromosome, simple_exploratory_attacker.best_fit_validation.fitness_test)
+print( "validation", simple_exploratory_attacker.best_fit_validation.chromosome[0], simple_exploratory_attacker.best_fit_validation.fitness_validation)
+print( "test", simple_exploratory_attacker.best_fit_validation.chromosome[0], simple_exploratory_attacker.best_fit_validation.fitness_test)
 
 
 
-
-
-simple_neural_network = aSimpleNeuralNetwork("Project3_Dataset_v1.txt", 2, 1)
+simple_neural_network = aSimpleNeuralNetwork("Project3_Dataset_v1.txt", 2, 1, simple_exploratory_attacker.best_fit_validation.chromosome[1:])
 simple_neural_network.train()
 simple_neural_network.set_sigma(simple_exploratory_attacker.best_fit_validation.chromosome[0])
 mse = simple_neural_network.test_model()
@@ -449,4 +497,5 @@ print("Model Test AMSE: ", mse )
 fitness = simple_neural_network.print_statistics()
 fitness_validation = simple_neural_network.test_model_validation()
 print("test results")
+print(sum(simple_exploratory_attacker.best_fit_validation.chromosome[1:]))
 fitness_test = simple_neural_network.test_model_test()
