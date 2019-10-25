@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="53a11553-8514-4f78-873a-a450f6cf6d47" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-3/GRNN_A.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/GRNN_A.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-3/GRNN_B2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/GRNN_B2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-3/bonus_point.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/bonus_point.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-3/dataset.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/dataset.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-3/simpleNeuralNetworkv (2).py" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/simpleNeuralNetworkv (2).py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GRNN_A.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GRNN_A.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project-3/GRNN_A.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="160" column="8" lean-forward="true" selection-start-line="160" selection-start-column="8" selection-end-line="160" selection-end-column="40" />
+            <state relative-caret-position="-2933">
+              <caret line="160" column="8" selection-start-line="160" selection-start-column="8" selection-end-line="160" selection-end-column="40" />
               <folding>
                 <element signature="e#177#186#0" expanded="true" />
               </folding>
@@ -43,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GRNN_B2.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GRNN_B2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project-3/GRNN_B2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-238">
@@ -68,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/Project-1/GA-master.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="121" column="47" lean-forward="true" selection-start-line="111" selection-start-column="12" selection-end-line="121" selection-end-column="47" />
+              <caret line="121" column="47" selection-start-line="111" selection-start-column="12" selection-end-line="121" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -87,8 +82,8 @@
       <find>train</find>
       <find>mask</find>
       <find>0.04458029397110205</find>
-      <find>print</find>
       <find>model test</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -140,11 +135,6 @@
             <path>
               <item name="Adversarial_m" type="b2602c69:ProjectViewProjectNode" />
               <item name="Adversarial_m" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Adversarial_m" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Adversarial_m" type="462c0819:PsiDirectoryNode" />
-              <item name="Project-1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Adversarial_m" type="b2602c69:ProjectViewProjectNode" />
@@ -344,7 +334,21 @@
       <option name="project" value="LOCAL" />
       <updated>1571611431498</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="initial">
+      <created>1571631477537</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1571631477537</updated>
+    </task>
+    <task id="LOCAL-00007" summary="initial">
+      <created>1571631575173</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571631575173</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -353,14 +357,14 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32969698" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35636362" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.28727272" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21101573" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35636362" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.42545456" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21101573" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.27968526" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.27968526" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -501,7 +505,7 @@
     <entry file="file://$PROJECT_DIR$/Project-1/GA-master.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="121" column="47" lean-forward="true" selection-start-line="111" selection-start-column="12" selection-end-line="121" selection-end-column="47" />
+          <caret line="121" column="47" selection-start-line="111" selection-start-column="12" selection-end-line="121" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -522,9 +526,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Project-3/GRNN_B2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-238">
+          <caret line="460" column="20" selection-start-line="460" selection-start-column="20" selection-end-line="460" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Project-3/simpleNeuralNetworkv (2).py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
+        <state relative-caret-position="485">
           <caret line="199" column="33" selection-start-line="199" selection-start-column="33" selection-end-line="199" selection-end-column="33" />
           <folding>
             <element signature="e#91#100#0" expanded="true" />
@@ -534,18 +545,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Project-3/GRNN_A.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="160" column="8" lean-forward="true" selection-start-line="160" selection-start-column="8" selection-end-line="160" selection-end-column="40" />
+        <state relative-caret-position="-2933">
+          <caret line="160" column="8" selection-start-line="160" selection-start-column="8" selection-end-line="160" selection-end-column="40" />
           <folding>
             <element signature="e#177#186#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project-3/GRNN_B2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="460" column="20" selection-start-line="460" selection-start-column="20" selection-end-line="460" selection-end-column="20" />
         </state>
       </provider>
     </entry>
