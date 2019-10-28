@@ -1,5 +1,4 @@
-import Data_Utils
-from sklearn.model_selection import StratifiedKFold
+import project_4.Data_Utils as Data_Utils
 from sklearn.preprocessing import StandardScaler, normalize
 from sklearn import svm
 from sklearn.neural_network import MLPClassifier
@@ -12,7 +11,6 @@ from sklearn.model_selection import cross_val_score
 
 CU_X, Y = Data_Utils.Get_Casis_CUDataset()
 
-
 rbfsvm = svm.SVC()
 lsvm = svm.LinearSVC()
 mlp = MLPClassifier(max_iter=2000)
@@ -23,7 +21,6 @@ fold_accuracy = []
 scaler = StandardScaler()
 tfidf = TfidfTransformer(norm=None)
 dense = Data_Utils.DenseTransformer()
-
 for train, test in skf.split(CU_X, Y):
     #train split
     CU_train_data = CU_X[train]
@@ -60,5 +57,4 @@ for train, test in skf.split(CU_X, Y):
     mlp_acc = mlp.score(eval_data, eval_labels)
 
     fold_accuracy.append((lsvm_acc, rbfsvm_acc, mlp_acc))
-
 print(np.mean(fold_accuracy, axis = 0))
