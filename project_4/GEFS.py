@@ -125,7 +125,7 @@ class anIndividual:
 
 
     def print_individual(self, i):
-        print("Chromosome "+str(i) +": " + str(self.chromosome) + " Fitness: " + str(self.fitness))
+        print("Chromosome -- number of features "+str(i) +": " + str(sum(self.chromosome)) + " Fitness: " + str(self.fitness), " Fitness-tuple: " + str(self.fitness_RBFSVM),  str(self.fitness_LSVM),str(self.fitness_MLP) )
       
 class aSimpleExploratoryAttacker:
     def __init__(self, population_size, chromosome_length, mutation_rate):
@@ -229,7 +229,7 @@ ChromLength = 95
 MaxEvaluations = 4000
 plot = 0
 
-PopSize = 5
+PopSize = 10
 mu_amt  = 0.01
 
 simple_exploratory_attacker = aSimpleExploratoryAttacker(chromosome_length=ChromLength, mutation_rate=mu_amt, population_size=PopSize)
