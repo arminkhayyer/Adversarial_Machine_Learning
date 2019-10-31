@@ -8,7 +8,7 @@ import sys
 import math
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-import project_4.Data_Utils as Data_Utils
+import Data_Utils as Data_Utils
 from sklearn.preprocessing import StandardScaler, normalize
 from sklearn import svm
 from sklearn.neural_network import MLPClassifier
