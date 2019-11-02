@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53a11553-8514-4f78-873a-a450f6cf6d47" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/project_4/GEFS.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project_4/unigram.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-4/BaselineMLTs.py" beforeDir="false" afterPath="$PROJECT_DIR$/project_4/BaselineMLTs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-4/CASIS-25_CU.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project_4/CASIS-25_CU.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-4/CASIS-25_Dataset.zip" beforeDir="false" afterPath="$PROJECT_DIR$/project_4/CASIS-25_Dataset.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-4/Data_Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/project_4/Data_Utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-2/Paper.doc" beforeDir="false" afterPath="$PROJECT_DIR$/Project-2/Paper.doc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-4/BaselineMLTs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project_4/BaselineMLTs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-4/CASIS-25_CU.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project_4/CASIS-25_CU.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-4/CASIS-25_Dataset.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Project_4/CASIS-25_Dataset.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-4/Data_Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project_4/Data_Utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-4/GEFS.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project_4/GEFS.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-4/unigram.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project_4/unigram.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +21,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Adversarial_m$FFNN_B.coverage" NAME="FFNN_B Coverage Results" MODIFIED="1571529764014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
     <SUITE FILE_PATH="coverage/Adversarial_m$simpleNeuralNetworkv__2_.coverage" NAME="simpleNeuralNetworkv (2) Coverage Results" MODIFIED="1571624426169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
-    <SUITE FILE_PATH="coverage/Adversarial_m$GEFS.coverage" NAME="GEFS Coverage Results" MODIFIED="1572282972522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project_4" />
+    <SUITE FILE_PATH="coverage/Adversarial_m$GEFS.coverage" NAME="GEFS Coverage Results" MODIFIED="1572289335994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project_4" />
     <SUITE FILE_PATH="coverage/Adversarial_m$BaselineMLTs.coverage" NAME="BaselineMLTs Coverage Results" MODIFIED="1572282778812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project_4" />
     <SUITE FILE_PATH="coverage/Adversarial_m$GRNN_A.coverage" NAME="GRNN_A Coverage Results" MODIFIED="1571624541760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
     <SUITE FILE_PATH="coverage/Adversarial_m$RBFNN.coverage" NAME="RBFNN Coverage Results" MODIFIED="1571529677593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
@@ -31,59 +32,11 @@
     <SUITE FILE_PATH="coverage/Adversarial_m$bonus_point.coverage" NAME="bonus_point Coverage Results" MODIFIED="1571613178617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
     <SUITE FILE_PATH="coverage/Adversarial_m$ring_synchronous_PSO.coverage" NAME="ring_synchronous_PSO Coverage Results" MODIFIED="1569578861335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-2" />
     <SUITE FILE_PATH="coverage/Adversarial_m$GA_master.coverage" NAME="GA-master Coverage Results" MODIFIED="1568879721293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Adversarial_m$hw4.coverage" NAME="hw4 Coverage Results" MODIFIED="1572636090447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/group_assignemnt4" />
     <SUITE FILE_PATH="coverage/Adversarial_m$GRNN_B2.coverage" NAME="GRNN_B2 Coverage Results" MODIFIED="1572204916665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="unigram.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project_4/unigram.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#366#380#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GEFS.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/project_4/GEFS.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
-              <folding>
-                <element signature="e#92#101#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaselineMLTs.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project_4/BaselineMLTs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Data_Utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project_4/Data_Utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -121,6 +74,9 @@
         <option value="$PROJECT_DIR$/project_4/unigram.py" />
         <option value="$PROJECT_DIR$/project_4/BaselineMLTs.py" />
         <option value="$PROJECT_DIR$/project_4/GEFS.py" />
+        <option value="$PROJECT_DIR$/Project-4/GEFS.py" />
+        <option value="$PROJECT_DIR$/Project_4/GEFS.py" />
+        <option value="$PROJECT_DIR$/group_assignemnt4/hw4.py" />
       </list>
     </option>
   </component>
@@ -160,12 +116,7 @@
             <path>
               <item name="Adversarial_m" type="b2602c69:ProjectViewProjectNode" />
               <item name="Adversarial_m" type="462c0819:PsiDirectoryNode" />
-              <item name="Project-1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Adversarial_m" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Adversarial_m" type="462c0819:PsiDirectoryNode" />
-              <item name="project_4" type="462c0819:PsiDirectoryNode" />
+              <item name="group_assignemnt4" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -201,7 +152,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.GEFS">
+  <component name="RunManager" selected="Python.hw4">
     <configuration name="BaselineMLTs" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Adversarial_m" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -240,25 +191,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="GRNN_A" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Adversarial_m" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project-3" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project-3/GRNN_A.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="GRNN_B2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Adversarial_m" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -273,6 +205,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project-3/GRNN_B2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="hw4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Adversarial_m" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/group_assignemnt4" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/group_assignemnt4/hw4.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -298,19 +249,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.GRNN_A" />
       <item itemvalue="Python.GRNN_B2" />
       <item itemvalue="Python.BaselineMLTs" />
       <item itemvalue="Python.unigram" />
       <item itemvalue="Python.GEFS" />
+      <item itemvalue="Python.hw4" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.hw4" />
         <item itemvalue="Python.GEFS" />
         <item itemvalue="Python.BaselineMLTs" />
         <item itemvalue="Python.unigram" />
         <item itemvalue="Python.GRNN_B2" />
-        <item itemvalue="Python.GRNN_A" />
       </list>
     </recent_temporary>
   </component>
@@ -381,27 +332,40 @@
       <option name="project" value="LOCAL" />
       <updated>1572039719066</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="project-4">
+      <created>1572283737420</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1572283737420</updated>
+    </task>
+    <task id="LOCAL-00010" summary="project-4">
+      <created>1572326796191</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1572326796191</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35636362" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32969698" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32969698" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.42545456" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21387696" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35636362" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.42545456" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21959943" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" weight="0.27968526" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -419,16 +383,28 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial" />
+    <MESSAGE value="project-4" />
+    <option name="LAST_COMMIT_MESSAGE" value="project-4" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Project_4/GEFS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project_4/GEFS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Project-3/GRNN_A.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2280">
           <caret line="160" column="8" selection-start-line="160" selection-start-column="8" selection-end-line="160" selection-end-column="40" />
-          <folding>
-            <element signature="e#177#186#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -443,9 +419,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
           <caret line="53" selection-start-line="53" selection-end-line="53" />
-          <folding>
-            <element signature="e#92#101#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -460,9 +433,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3060">
           <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
-          <folding>
-            <element signature="e#177#186#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -538,9 +508,6 @@
         <state relative-caret-position="-822" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project-3/SVM.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project-3/FFNN_B.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1034">
@@ -554,9 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="160" column="8" selection-start-line="160" selection-start-column="8" selection-end-line="160" selection-end-column="40" />
-          <folding>
-            <element signature="e#177#186#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -571,32 +535,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
           <caret line="53" selection-start-line="53" selection-end-line="53" />
-          <folding>
-            <element signature="e#92#101#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project_4/CASIS-25_CU.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project_4/Data_Utils.py">
+    <entry file="file://$PROJECT_DIR$/Project_4/Data_Utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project_4/unigram.py">
+    <entry file="file://$PROJECT_DIR$/Project_4/unigram.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#366#380#0" expanded="true" />
-          </folding>
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -612,23 +567,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project_4/BaselineMLTs.py">
+    <entry file="file://$PROJECT_DIR$/Project_4/BaselineMLTs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
           <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project_4/GEFS.py">
+    <entry file="file://$PROJECT_DIR$/Project_4/GEFS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
-          <folding>
-            <element signature="e#92#101#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="280">
+          <caret line="231" column="12" selection-start-line="231" selection-start-column="12" selection-end-line="231" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/group_assignemnt4/hw4.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/group_assignemnt4/notebook.tex">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project_4/GEFS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="41" />
         </state>
       </provider>
     </entry>
