@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="53a11553-8514-4f78-873a-a450f6cf6d47" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-2/Paper.doc" beforeDir="false" afterPath="$PROJECT_DIR$/Project-2/Paper.doc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-4/BaselineMLTs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project_4/BaselineMLTs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-4/CASIS-25_CU.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project_4/CASIS-25_CU.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-4/CASIS-25_Dataset.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Project_4/CASIS-25_Dataset.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-4/Data_Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project_4/Data_Utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-4/GEFS.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project_4/GEFS.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-4/unigram.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project_4/unigram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group_assignemnt4/GroupAssignment4.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/group_assignemnt4/GroupAssignment4.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group_assignemnt4/GroupAssignment4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/group_assignemnt4/GroupAssignment4.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group_assignemnt4/notebook.tex" beforeDir="false" afterPath="$PROJECT_DIR$/group_assignemnt4/notebook.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,7 +32,7 @@
     <SUITE FILE_PATH="coverage/Adversarial_m$GRNN_B2.coverage" NAME="GRNN_B2 Coverage Results" MODIFIED="1572204916665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -77,6 +73,7 @@
         <option value="$PROJECT_DIR$/Project-4/GEFS.py" />
         <option value="$PROJECT_DIR$/Project_4/GEFS.py" />
         <option value="$PROJECT_DIR$/group_assignemnt4/hw4.py" />
+        <option value="$PROJECT_DIR$/group_assignemnt4/plot.py" />
       </list>
     </option>
   </component>
@@ -96,16 +93,14 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="816" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -122,6 +117,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -132,12 +128,13 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/group_assignemnt4" />
       <recent name="$PROJECT_DIR$/project_4" />
       <recent name="$PROJECT_DIR$/Project-3" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -346,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572326796191</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="project-4">
+      <created>1572667386319</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1572667386319</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -358,8 +362,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32969698" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32969698" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.35636362" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.42545456" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21959943" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.37333333" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22532189" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" weight="0.27968526" />
@@ -542,9 +546,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -581,18 +582,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/group_assignemnt4/hw4.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/group_assignemnt4/notebook.tex">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project_4/GEFS.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="41" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="41" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/group_assignemnt4/plot.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
