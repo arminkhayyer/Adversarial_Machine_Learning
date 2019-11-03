@@ -45,8 +45,13 @@ def unigram():
     feature_df = feature_df.drop(["index"], 1)
     return feature_df
 
+try:
+    feature_df = pd.read_csv("features.csv", sep=",")
+except:
+    feature_df = unigram()
+    feature_df.to_csv("features.csv", sep=",", index=False)
 
-feature_df = unigram()
+
 def feature_selection(mask):
     df_x = feature_df.drop(["label"], 1)
     df_x = df_x.loc[:, mask]
@@ -125,7 +130,7 @@ class anIndividual:
 
 
     def print_individual(self, i):
-        print("Chromosome -- number of features "+str(i) +": " + str(sum(self.chromosome)) + " Fitness: " + str(self.fitness), " Fitness-tuple: " + str(self.fitness_RBFSVM),  str(self.fitness_LSVM),str(self.fitness_MLP) )
+        print("Chromosome - "+str(i) +"- number of features: " + str(sum(self.chromosome)) + " Fitness: " + str(self.fitness), " Fitness-tuple: " + str(self.fitness_RBFSVM),  str(self.fitness_LSVM),str(self.fitness_MLP) )
       
 class aSimpleExploratoryAttacker:
     def __init__(self, population_size, chromosome_length, mutation_rate):
@@ -143,15 +148,30 @@ class aSimpleExploratoryAttacker:
             individual.randomly_generate()
             individual.calculate_fitness()
             self.population.append(individual)
-    
+
     def get_worst_fit_individual(self):
         worst_fitness = 999999999.0  # For Maximization
         worst_individual = -1
         for i in range(self.population_size):
-            if (self.population[i].fitness < worst_fitness): 
+            if (self.population[i].fitness < worst_fitness):
                 worst_fitness = self.population[i].fitness
                 worst_individual = i
+            elif (self.population[i].fitness == worst_fitness):
+                if sum(self.population[i].chromosome) > sum(self.population[worst_individual].chromosome):
+                    worst_fitness = self.population[i].fitness
+                    worst_individual = i
         return worst_individual
+
+
+
+    # def get_worst_fit_individual(self):
+    #     worst_fitness = 999999999.0  # For Maximization
+    #     worst_individual = -1
+    #     for i in range(self.population_size):
+    #         if (self.population[i].fitness < worst_fitness):
+    #             worst_fitness = self.population[i].fitness
+    #             worst_individual = i
+    #     return worst_individual
     
     def get_best_fitness(self):
         best_fitness = -99999999999.0
@@ -163,14 +183,46 @@ class aSimpleExploratoryAttacker:
         return best_fitness
 
 
+    # def tournoment_selection(self, k=2):
+    #     tournoment_output1 = random.choices(self.population, k=k)
+    #     best_indivisual1 = [i.fitness for i in tournoment_output1]
+    #     parent1 = tournoment_output1[best_indivisual1.index(max(best_indivisual1))]
+    #     tournoment_output2 = random.choices(self.population, k=k)
+    #     best_indivisual2 = [i.fitness for i in tournoment_output2]
+    #     parent2 = tournoment_output2[best_indivisual2.index(max(best_indivisual2))]
+    #     return parent1, parent2
+
+
+
     def tournoment_selection(self, k=2):
         tournoment_output1 = random.choices(self.population, k=k)
         best_indivisual1 = [i.fitness for i in tournoment_output1]
-        parent1 = tournoment_output1[best_indivisual1.index(max(best_indivisual1))]
+        if best_indivisual1[0] > best_indivisual1[1]:
+            parent1 = tournoment_output1[0]
+        elif best_indivisual1[0] == best_indivisual1[1]:
+            if sum(tournoment_output1[0].chromosome) < sum(tournoment_output1[1].chromosome):
+                parent1 = tournoment_output1[0]
+            else:
+                parent1 = tournoment_output1[1]
+        else:
+            parent1 = tournoment_output1[1]
+
+        #parent1 = tournoment_output1[best_indivisual1.index(max(best_indivisual1))]
+
         tournoment_output2 = random.choices(self.population, k=k)
         best_indivisual2 = [i.fitness for i in tournoment_output2]
-        parent2 = tournoment_output2[best_indivisual2.index(max(best_indivisual2))]
+        if best_indivisual2[0] > best_indivisual2[1]:
+            parent2 = tournoment_output2[0]
+        elif best_indivisual2[0] == best_indivisual2[1]:
+            if sum(tournoment_output2[0].chromosome) < sum(tournoment_output2[1].chromosome):
+                parent2 = tournoment_output2[0]
+            else:
+                parent2 = tournoment_output2[1]
+        else:
+            parent2 = tournoment_output2[1]
+        # parent2 = tournoment_output2[best_indivisual2.index(max(best_indivisual2))]
         return parent1, parent2
+
 
 
     def Crossover_operator(self, mom, dad):
@@ -213,7 +265,8 @@ class aSimpleExploratoryAttacker:
                 best_fitness = self.population[i].fitness
                 best_individual = i
         print("Best Indvidual: ",str(best_individual)," ", self.population[best_individual].chromosome, " Fitness: ", str(best_fitness))
-    
+        return self.population[best_individual]
+
     # def plot_evolved_candidate_solutions(self):
     #     fig = plt.figure()
     #     ax1 = fig.add_subplot(1,1,1,projection='3d')
@@ -225,34 +278,42 @@ class aSimpleExploratoryAttacker:
     #     plt.show()
 
 
-ChromLength = 95
-MaxEvaluations = 4000
-plot = 0
 
-PopSize = 10
-mu_amt  = 0.01
+look_up_table = sorted([i for i in string.printable])
+look_up_table = look_up_table[5:]
+look_up_table = look_up_table + ["fitness", "fitness_lsvm", "fitness_RBFSVM", "fitness_MLP"]
+results = pd.DataFrame(columns=look_up_table)
 
-simple_exploratory_attacker = aSimpleExploratoryAttacker(chromosome_length=ChromLength, mutation_rate=mu_amt, population_size=PopSize)
+for rep in range(2):
+    ChromLength = 95
+    MaxEvaluations = 10
 
-simple_exploratory_attacker.generate_initial_population()
-simple_exploratory_attacker.print_population()
-best = 0
-for i in range(MaxEvaluations-PopSize):
-    best = i
-    simple_exploratory_attacker.evolutionary_cycle()
-    if (i % PopSize == 0):
-        if (plot == 1):
-            # simple_exploratory_attacker.plot_evolved_candidate_solutions()
-            pass
-        print("At Iteration: " + str(i))
-        simple_exploratory_attacker.print_population()
-    # if (simple_exploratory_attacker.get_best_fitness() >= 0.99754):
-    #     break
+    PopSize = 5
+    mu_amt  = 0.01
+
+    simple_exploratory_attacker = aSimpleExploratoryAttacker(chromosome_length=ChromLength, mutation_rate=mu_amt, population_size=PopSize)
+
+    simple_exploratory_attacker.generate_initial_population()
+    simple_exploratory_attacker.print_population()
+    best = 0
+    for i in range(MaxEvaluations-PopSize):
+        best = i
+        simple_exploratory_attacker.evolutionary_cycle()
+        if (i % PopSize == 0):
+            print("At Iteration: " + str(i))
+            simple_exploratory_attacker.print_population()
+        # if (simple_exploratory_attacker.get_best_fitness() >= 0.99754):
+        #     break
 
 
-print("\nFinal Population\n")
-simple_exploratory_attacker.print_population()
-simple_exploratory_attacker.print_best_max_fitness()
-print("Function Evaluations: " + str(i))
-# simple_exploratory_attacker.plot_evolved_candidate_solutions()
-print("best :", i)
+    print("\nFinal Population\n")
+    simple_exploratory_attacker.print_population()
+    best_indiv = simple_exploratory_attacker.print_best_max_fitness()
+    print("Function Evaluations: " + str(i))
+    # simple_exploratory_attacker.plot_evolved_candidate_solutions()
+    row = best_indiv.chromosome + [best_indiv.fitness, best_indiv.fitness_LSVM, best_indiv.fitness_RBFSVM, best_indiv.fitness_MLP]
+    results.loc[rep, :] = row
+
+print(results)
+results.to_csv("final_results.csv", sep=",")
+
