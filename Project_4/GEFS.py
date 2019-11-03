@@ -284,11 +284,11 @@ look_up_table = look_up_table[5:]
 look_up_table = look_up_table + ["fitness", "fitness_lsvm", "fitness_RBFSVM", "fitness_MLP"]
 results = pd.DataFrame(columns=look_up_table)
 
-for rep in range(2):
+for rep in range(10):
     ChromLength = 95
-    MaxEvaluations = 10
+    MaxEvaluations = 1000
 
-    PopSize = 5
+    PopSize = 50
     mu_amt  = 0.01
 
     simple_exploratory_attacker = aSimpleExploratoryAttacker(chromosome_length=ChromLength, mutation_rate=mu_amt, population_size=PopSize)
@@ -302,9 +302,6 @@ for rep in range(2):
         if (i % PopSize == 0):
             print("At Iteration: " + str(i))
             simple_exploratory_attacker.print_population()
-        # if (simple_exploratory_attacker.get_best_fitness() >= 0.99754):
-        #     break
-
 
     print("\nFinal Population\n")
     simple_exploratory_attacker.print_population()
