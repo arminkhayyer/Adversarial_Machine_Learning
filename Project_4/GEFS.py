@@ -8,7 +8,7 @@ import sys
 import math
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-import Project_4.Data_Utils as Data_Utils
+import Data_Utils as Data_Utils
 from sklearn.preprocessing import StandardScaler, normalize
 from sklearn import svm
 from sklearn.neural_network import MLPClassifier
@@ -20,7 +20,7 @@ from sklearn.model_selection import cross_val_score
 import zipfile
 import string
 import pandas as pd
-
+from warnings import simplefilter
 
 
 def unigram():
@@ -278,7 +278,7 @@ class aSimpleExploratoryAttacker:
     #     plt.show()
 
 
-
+simplefilter(action='ignore', category=FutureWarning)
 look_up_table = sorted([i for i in string.printable])
 look_up_table = look_up_table[5:]
 look_up_table = look_up_table + ["fitness", "fitness_lsvm", "fitness_RBFSVM", "fitness_MLP"]
