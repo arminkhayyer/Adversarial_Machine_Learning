@@ -29,7 +29,6 @@ Y_test = np_utils.to_categorical(y_test, 10)
 NeuralNetwork = tf.keras.Sequential()
 NeuralNetwork.add(tf.keras.layers.Flatten())
 NeuralNetwork.add(tf.keras.layers.Dense(64, activation=tf.nn.relu))
-NeuralNetwork.add(tf.keras.layers.Dense(128, activation=tf.nn.relu))
 NeuralNetwork.add(tf.keras.layers.Dense(64, activation=tf.nn.relu))
 NeuralNetwork.add(tf.keras.layers.Dense(10, activation=tf.nn.softmax))
 

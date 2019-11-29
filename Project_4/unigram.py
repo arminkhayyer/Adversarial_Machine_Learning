@@ -2,8 +2,6 @@ import zipfile
 import string
 import pandas as pd
 
-
-
 my_zip = zipfile.ZipFile("CASIS-25_Dataset.zip")
 all_files = my_zip.namelist()
 all_files = sorted(all_files)
@@ -20,4 +18,3 @@ for file in all_files:
             char = chr(ch)
             if char in look_up_table:
                 feature_df.loc[file, char] += 1
-

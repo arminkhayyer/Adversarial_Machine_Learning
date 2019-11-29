@@ -18,8 +18,7 @@ def get_text_dataset(filename):
     with open(filename, "r") as feature_file:
         for line in feature_file:
             line = line.strip().split(",")
-            Y.append(line[0])
-
+            Y.append(line[0][:4])
             X.append([float(x) for x in line[1:]])
     return np.array(X), np.array(Y)
 
