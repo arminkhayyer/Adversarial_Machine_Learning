@@ -1,16 +1,17 @@
+import os
 import numpy as np
 import tensorflow as tf
-import keras
 from keras.utils import np_utils
 from matplotlib import pyplot as plt
 from warnings import simplefilter
 
 # Kernel Setup
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'  # Comment this line on other OS'
 simplefilter(action="ignore", category=FutureWarning)
 np.random.seed(123)
 
 # Load Data
-(X_train, y_train), (X_test, y_test) = keras.datasets.mnist.load_data()
+(X_train, y_train), (X_test, y_test) = tf.keras.datasets.mnist.load_data()
 plt.imshow(X_train[0])
 
 # Pre-processing data
@@ -25,15 +26,19 @@ Y_train = np_utils.to_categorical(y_train, 10)
 Y_test = np_utils.to_categorical(y_test, 10)
 
 # Define Model Architecture
-NeuralNetwork = keras.Sequential()
-NeuralNetwork.add(keras.layers.Flatten())
-NeuralNetwork.add(keras.layers.Dense(128, activation=tf.nn.relu))
-NeuralNetwork.add(keras.layers.Dense(128, activation=tf.nn.relu))
-NeuralNetwork.add(keras.layers.Dense(10, activation=tf.nn.softmax))
+NeuralNetwork = tf.keras.Sequential()
+NeuralNetwork.add(tf.keras.layers.Flatten())
+NeuralNetwork.add(tf.keras.layers.Dense(64, activation=tf.nn.relu))
+NeuralNetwork.add(tf.keras.layers.Dense(128, activation=tf.nn.relu))
+NeuralNetwork.add(tf.keras.layers.Dense(64, activation=tf.nn.relu))
+NeuralNetwork.add(tf.keras.layers.Dense(10, activation=tf.nn.softmax))
 
 # Train Model
 NeuralNetwork.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-NeuralNetwork.fit(X_train, y_train, epochs=5)
+NeuralNetwork.fit(X_train, y_train, epochs=3)
 
 # Test Model
+y_pred = NeuralNetwork.predict(X_train)
 val_loss, val_acc = NeuralNetwork.evaluate(X_test, y_test)
+print("Test loss:" + str(val_loss) + "   " + "Test acc:" + str(val_acc))
+print(np.argmax(y_pred[0]))
