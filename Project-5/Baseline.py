@@ -13,10 +13,10 @@ simplefilter(action="ignore", category=FutureWarning)
 np.random.seed(123)
 
 # Load Data
-# CU_X, Y = Data_Utils.get_text_dataset('datasets/casis25_bow.txt')
-# CU_X, Y = Data_Utils.get_text_dataset('datasets/casis25_ncu.txt')
-# CU_X, Y = Data_Utils.get_text_dataset('datasets/casis25_sty.txt')
-CU_X, raw_Y = Data_Utils.get_text_dataset('datasets/casis25_char-gram_gram=3-limit=1000.txt')
+# CU_X, raw_Y = Data_Utils.get_text_dataset('datasets/casis25_bow.txt')
+CU_X, raw_Y = Data_Utils.get_text_dataset('datasets/casis25_ncu.txt')
+# CU_X, raw_Y = Data_Utils.get_text_dataset('datasets/casis25_sty.txt')
+# CU_X, raw_Y = Data_Utils.get_text_dataset('datasets/casis25_char-gram_gram=3-limit=1000.txt')
 
 # Process Labels
 Y = []
@@ -28,8 +28,9 @@ Y = Y.astype(str)
 # Define Model Architecture
 NeuralNetwork = tf.keras.Sequential()
 NeuralNetwork.add(tf.keras.layers.Flatten())
-NeuralNetwork.add(tf.keras.layers.Dense(1500, activation=tf.nn.relu))
-NeuralNetwork.add(tf.keras.layers.Dense(1500, activation=tf.nn.relu))
+NeuralNetwork.add(tf.keras.layers.Dense(1000, activation=tf.nn.relu))
+NeuralNetwork.add(tf.keras.layers.Dense(1000, activation=tf.nn.relu))
+NeuralNetwork.add(tf.keras.layers.Dense(100, activation=tf.nn.relu))
 NeuralNetwork.add(tf.keras.layers.Dense(25, activation=tf.nn.softmax))
 
 # Baseline processing
