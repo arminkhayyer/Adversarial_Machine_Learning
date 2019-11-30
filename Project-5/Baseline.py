@@ -16,14 +16,21 @@ np.random.seed(123)
 # CU_X, Y = Data_Utils.get_text_dataset('datasets/casis25_bow.txt')
 # CU_X, Y = Data_Utils.get_text_dataset('datasets/casis25_ncu.txt')
 # CU_X, Y = Data_Utils.get_text_dataset('datasets/casis25_sty.txt')
-CU_X, Y = Data_Utils.get_text_dataset('datasets/casis25_char-gram_gram=3-limit=1000.txt')
+CU_X, raw_Y = Data_Utils.get_text_dataset('datasets/casis25_char-gram_gram=3-limit=1000.txt')
+
+# Process Labels
+Y = []
+for elem in raw_Y:
+    Y.append(int(elem) - 1000)
+Y = np.array(Y)
+Y = Y.astype(str)
 
 # Define Model Architecture
 NeuralNetwork = tf.keras.Sequential()
 NeuralNetwork.add(tf.keras.layers.Flatten())
 NeuralNetwork.add(tf.keras.layers.Dense(1500, activation=tf.nn.relu))
 NeuralNetwork.add(tf.keras.layers.Dense(1500, activation=tf.nn.relu))
-NeuralNetwork.add(tf.keras.layers.Dense(1050, activation=tf.nn.softmax))
+NeuralNetwork.add(tf.keras.layers.Dense(25, activation=tf.nn.softmax))
 
 # Baseline processing
 skf = StratifiedKFold(n_splits=4, shuffle=True, random_state=0)
@@ -65,6 +72,7 @@ for train, test in skf.split(CU_X, Y):
 
     # Evaluate Model
     val_loss, val_acc = NeuralNetwork.evaluate(eval_data, eval_labels)
+    pred_labels = NeuralNetwork.predict(eval_data)
     print("Test loss:" + str(val_loss) + "\n" + "Test acc:" + str(val_acc))
 
     fold_accuracy.append(val_acc)
