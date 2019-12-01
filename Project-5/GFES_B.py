@@ -5,34 +5,29 @@
 import os
 import random
 import sys
-import math
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-import Data_Utils as Data_Utils
-from sklearn.preprocessing import StandardScaler, normalize
+import Data_Utils
+import pandas as pd
+import numpy as np
 from sklearn import svm
+from sklearn.preprocessing import StandardScaler, normalize
 from sklearn.neural_network import MLPClassifier
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.model_selection import StratifiedKFold
-from sklearn import preprocessing
-import numpy as np
-from sklearn.model_selection import cross_val_score
-import zipfile
-import string
-import pandas as pd
 from warnings import simplefilter
-import pickle
-from sklearn.model_selection import train_test_split
-import Data_Utils
-import pandas as pd
-from Extractor.DatasetInfo import DatasetInfo
 from Extractor.Extractors import BagOfWords, Stylomerty, Unigram, CharacterGram
 
-data_dir = "./data/"
-feature_set_dir = "./datasets/"
+# Kernel Setup
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'  # Comment this line on other OS'
+simplefilter(action="ignore", category=FutureWarning)
+np.random.seed(123)
 
 def extract_features():
+    data_dir = "./data/"
+    feature_set_dir = "./datasets/"
+
+    print("Extracting Features...")
     for i in range(4):
+        print(4-i)
         if i == 0:
             extractor = Unigram(data_dir + "CASIS25/", "casis25")
         elif i == 1:
@@ -44,11 +39,8 @@ def extract_features():
 
         extractor.start()
         lookup_table = extractor.lookup_table
-        print("Generated Lookup Table:")
-        # print(lookup_table)
         col = []
         if lookup_table is not False:
-            print("'" + "', '".join([str("".join(x)).replace("\n", " ") for x in lookup_table]) + "'")
             for x in lookup_table:
                 col.append("'" + "', '".join([str("".join(x)).replace("\n", " ")]) + "'")
             generated_file = feature_set_dir + extractor.out_file + ".txt"
@@ -64,42 +56,7 @@ def extract_features():
             df = pd.DataFrame(data)
             df.insert(0, "Label", labels, True)
             df.to_csv(generated_csv_file)
-
-        # Get dataset information
-        dataset_info = DatasetInfo("casis25_bow")
-        dataset_info.read()
-        authors = dataset_info.authors
-        writing_samples = dataset_info.instances
-        print("\n\nAuthors in the dataset:")
-        print(authors)
-
-        print("\n\nWriting samples of an author 1000")
-        print(authors["1000"])
-
-        print("\n\nAll writing samples in the dataset")
-        print(writing_samples)
-
-        print("\n\nThe author of the writing sample 1000_1")
-        print(writing_samples["1000_1"])
-
-        # print(labels[0], data[0])
-    print("Done")
-
-extract_features()
-df = pd.read_csv('datasets/casis25_ncu.txt', header=None)
-
-features = ['casis25_char-gram_gram=3-limit=1000.txt', 'casis25_bow.txt', 'casis25_sty.txt']
-
-for feature in features:
-    df_feature = pd.read_csv("datasets/" + feature, header=None)
-    df = pd.merge(df, df_feature, on=0, how="left")
-    print(df_feature.shape)
-    print('adding {}'.format(feature))
-
-df["label"] = df[0].map(lambda x: str(x)[0:4])
-df_train = df.loc[df.label.str[0]=="1", :]
-df_test = df.loc[df.label.str[0]!="1", :]
-feature_df = df_train
+    print("Feature Extraction Done")
 
 def feature_selection(mask):
     df_x = feature_df.drop(["label", 0], 1)
@@ -111,8 +68,8 @@ def feature_selection(mask):
 def Baselin(mask):
     CU_X, Y = feature_selection(mask)
 
-    # rbfsvm = svm.SVC()
-    # lsvm = svm.LinearSVC()
+    rbfsvm = svm.SVC()
+    lsvm = svm.LinearSVC()
     mlp = MLPClassifier(max_iter=2000)
 
     skf = StratifiedKFold(n_splits=4, shuffle=True, random_state=0)
@@ -148,18 +105,16 @@ def Baselin(mask):
         eval_data = CU_eval_data
 
         # evaluation
-        # rbfsvm.fit(train_data, train_labels)
-        # lsvm.fit(train_data, train_labels)
+        rbfsvm.fit(train_data, train_labels)
+        lsvm.fit(train_data, train_labels)
         mlp.fit(train_data, train_labels)
 
-        # rbfsvm_acc = rbfsvm.score(eval_data, eval_labels)
-        # lsvm_acc = lsvm.score(eval_data, eval_labels)
+        rbfsvm_acc = rbfsvm.score(eval_data, eval_labels)
+        lsvm_acc = lsvm.score(eval_data, eval_labels)
         mlp_acc = mlp.score(eval_data, eval_labels)
 
-        fold_accuracy.append(mlp_acc)
-    return (np.mean(fold_accuracy))
-
-
+        fold_accuracy.append((lsvm_acc, rbfsvm_acc, mlp_acc))
+    return (np.mean(fold_accuracy, axis=0))
 
 def Baselin_predict(mask):
     df_pred_x = df_test.drop(["label", 0], 1)
@@ -168,8 +123,8 @@ def Baselin_predict(mask):
 
     CU_X, Y = feature_selection(mask)
 
-    # rbfsvm = svm.SVC()
-    # lsvm = svm.LinearSVC()
+    rbfsvm = svm.SVC()
+    lsvm = svm.LinearSVC()
     mlp = MLPClassifier(max_iter=2000)
 
     skf = StratifiedKFold(n_splits=4, shuffle=True, random_state=0)
@@ -206,27 +161,47 @@ def Baselin_predict(mask):
         eval_data = CU_eval_data
 
         # evaluation
-        # rbfsvm.fit(train_data, train_labels)
-        # lsvm.fit(train_data, train_labels)
+        rbfsvm.fit(train_data, train_labels)
+        lsvm.fit(train_data, train_labels)
         mlp.fit(train_data, train_labels)
 
-        # rbfsvm_acc = rbfsvm.score(eval_data, eval_labels)
-        # lsvm_acc = lsvm.score(eval_data, eval_labels)
+        rbfsvm_acc = rbfsvm.score(eval_data, eval_labels)
+        lsvm_acc = lsvm.score(eval_data, eval_labels)
         mlp_acc = mlp.score(eval_data, eval_labels)
 
-        fold_accuracy.append(mlp_acc)
-    print(np.mean(fold_accuracy))
+        fold_accuracy.append((lsvm_acc, rbfsvm_acc, mlp_acc))
+    models_acc = np.mean(fold_accuracy, axis=0)
+    print(models_acc)
     CU_pred_data = dense.transform(tfidf.transform(x_pred))
 
     CU_pred_data = scaler.transform(CU_pred_data)
     CU_pred_data = normalize(CU_pred_data)
     print(CU_pred_data[0].shape)
-    pred = [mlp.predict(i.reshape(1, -1))[0] for i in CU_pred_data]
+    pred_rbfsvm = [rbfsvm.predict(i.reshape(1, -1))[0] for i in CU_pred_data]
+    pred_lsvm = [lsvm.predict(i.reshape(1, -1))[0] for i in CU_pred_data]
+    pred_mlp = [mlp.predict(i.reshape(1, -1))[0] for i in CU_pred_data]
+
+    pred = []
+    for elem in range(len(pred_rbfsvm)):
+        model_list = [pred_lsvm[elem], pred_rbfsvm[elem], pred_mlp[elem]]
+        duplicates = [x for n, x in enumerate(model_list) if x in model_list[:n]]
+        print(duplicates)
+        if duplicates:
+            pred.append(duplicates[0])
+        else:
+            print(models_acc)
+            pred.append(model_list[np.argmax(models_acc)])
+
+    df_test["pred_rbfsvm"] = pred_rbfsvm
+    df_test["pred_lsvm"] = pred_lsvm
+    df_test["pred_mlp"] = pred_mlp
     df_test["pred"] = pred
-    df_out = df_test[[0, "pred"]]
+    print("DF_TEST")
+    print(df_test)
+
+    df_out = df_test[[0,"pred"]]
     df_res = df_out.sort_values(by=[0])
     df_res.to_csv("AdversarialTestResults.txt", header=None, index=None, sep=' ')
-
 
 class anIndividual:
     def __init__(self, specified_chromosome_length):
@@ -242,7 +217,8 @@ class anIndividual:
             self.chromosome.append(random.choice([True, False, True]))
 
     def calculate_fitness(self):
-        self.fitness = Baselin(self.chromosome)
+        self.fitness_RBFSVM, self.fitness_LSVM, self.fitness_MLP = Baselin(self.chromosome)
+        self.fitness = (self.fitness_RBFSVM + self.fitness_LSVM + self.fitness_MLP) / 3
 
     def print_individual(self, i):
         print("Chromosome - " + str(i) + "- number of features: " + str(sum(self.chromosome)) + " Fitness: " + str(
@@ -385,6 +361,21 @@ class aSimpleExploratoryAttacker:
     #     ax1.set_zlim3d(0.2,1.0)
     #     plt.show()
 
+extract_features()
+df = pd.read_csv('datasets/casis25_ncu.txt', header=None)
+
+features = ['casis25_char-gram_gram=3-limit=1000.txt', 'casis25_bow.txt', 'casis25_sty.txt']
+
+for feature in features:
+    df_feature = pd.read_csv("datasets/" + feature, header=None)
+    df = pd.merge(df, df_feature, on=0, how="left")
+    print(df_feature.shape)
+    print('adding {}'.format(feature))
+
+df["label"] = df[0].map(lambda x: str(x)[0:4])
+df_train = df.loc[df.label.str[0]=="1", :]
+df_test = df.loc[df.label.str[0]!="1", :]
+feature_df = df_train
 try:
     mask = np.load("mask.npy")
 except:
