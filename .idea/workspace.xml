@@ -2,52 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53a11553-8514-4f78-873a-a450f6cf6d47" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/advText01.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/advText02.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/advText03.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/advText04.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/advText05.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project-5/GFES.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/GFES.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdversarialTest/1000_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/advText00.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdversarialTest/1000_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdversarialTest/1000_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdversarialTest/1000_4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdversarialTest/1001_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdversarialTest/1001_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdversarialTest/1001_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdversarialTest/1001_4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdversarialTest/1002_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdversarialTest/1002_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdversarialTest/1002_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdversarialTest/1002_4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdversarialTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/data/AdversarialTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/train/casis25.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/train/casis25_bow.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/train/casis25_char-gram_gram=3-limit=1000.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/train/casis25_ncu.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/train/casis25_sty.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_bow.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_bow.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_char-gram_gram=3-limit=1000.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_char-gram_gram=3-limit=1000.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_ncu.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_ncu.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_sty.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_sty.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_test_bow.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_test_bow_test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_test_char-gram_gram=3-limit=1000.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_test_char-gram_gram=3-limit=1000_test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_test_ncu.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_test_ncu_test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_test_sty.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_test_sty_test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/datasets/preprocessing.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/datasets/testcasis25.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/mask.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/mask.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/predictor.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,7 +22,7 @@
     <SUITE FILE_PATH="coverage/Adversarial_m$Master_PSO.coverage" NAME="Master-PSO Coverage Results" MODIFIED="1570568158417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-2" />
     <SUITE FILE_PATH="coverage/Adversarial_m$GRNN_B.coverage" NAME="GRNN_B Coverage Results" MODIFIED="1571535645462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
     <SUITE FILE_PATH="coverage/Adversarial_m$BaselineSklearn.coverage" NAME="BaselineSklearn Coverage Results" MODIFIED="1575141544873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-5" />
-    <SUITE FILE_PATH="coverage/Adversarial_m$GFES.coverage" NAME="GFES Coverage Results" MODIFIED="1575177220957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-5" />
+    <SUITE FILE_PATH="coverage/Adversarial_m$GFES.coverage" NAME="GFES Coverage Results" MODIFIED="1575222019634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-5" />
     <SUITE FILE_PATH="coverage/Adversarial_m$FFNN_B.coverage" NAME="FFNN_B Coverage Results" MODIFIED="1571529764014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
     <SUITE FILE_PATH="coverage/Adversarial_m$BaselineMLTs.coverage" NAME="BaselineMLTs Coverage Results" MODIFIED="1572282778812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project_4" />
     <SUITE FILE_PATH="coverage/Adversarial_m$preprocessing.coverage" NAME="preprocessing Coverage Results" MODIFIED="1575148937790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-5/datasets" />
@@ -88,11 +43,20 @@
       <file leaf-file-name="GFES.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project-5/GFES.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="327" column="18" selection-start-line="327" selection-start-column="18" selection-end-line="327" selection-end-column="18" />
+            <state relative-caret-position="189">
+              <caret line="167" column="13" selection-start-line="167" selection-start-column="13" selection-end-line="167" selection-end-column="13" />
               <folding>
                 <element signature="e#55#64#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project-5/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="870">
+              <caret line="61" selection-start-line="61" selection-end-line="61" />
             </state>
           </provider>
         </entry>
@@ -111,7 +75,7 @@
       <find>train</find>
       <find>mask</find>
       <find>0.04458029397110205</find>
-      <find>model test</find>
+      <find />
       <find>print</find>
       <find>Get_Casis_CUDataset</find>
       <find>print_individual</find>
@@ -193,19 +157,6 @@
               <item name="Adversarial_m" type="b2602c69:ProjectViewProjectNode" />
               <item name="Adversarial_m" type="462c0819:PsiDirectoryNode" />
               <item name="Project-5" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Adversarial_m" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Adversarial_m" type="462c0819:PsiDirectoryNode" />
-              <item name="Project-5" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Adversarial_m" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Adversarial_m" type="462c0819:PsiDirectoryNode" />
-              <item name="Project-5" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="CASIS25" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -512,11 +463,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/arminkhayyer/Adversarial_m&#10;&#10;# Conflicts:&#10;#&#9;.DS_Store" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Project-1/simpleExploratoryAttacker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-41" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project-1/GA-master.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1098">
@@ -658,13 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project-5/data/CASIS25/1000_1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="64" lean-forward="true" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project-5/datasets/test_ncu.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -688,11 +627,6 @@
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project-5/datasets/casis25_bow.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17967" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project-5/datasets/casis25_sty.csv">
@@ -720,9 +654,6 @@
     <entry file="file://$PROJECT_DIR$/Project-5/datasets/casis25_char-gram_gram=3-limit=1000.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project-5/datasets/casis25_bow.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project-5/data/AdversarialTest/1000_1.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -732,35 +663,15 @@
     <entry file="file://$PROJECT_DIR$/Project-5/data/CASIS25/advText02.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project-5/data/CASIS25/advText01.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project-5/data/CASIS25/advText00.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project-5/data/CASIS25/advText05.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Project-5/data/CASIS25/advText04.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project-5/data/AdversarialTests.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project-5/datasets/casis25_ncu.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-944" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project-5/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project-5/predictor.py">
@@ -773,10 +684,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/data/AdversarialTests.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/datasets/casis25_bow.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13137" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/datasets/casis25_bow.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14668" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/data/CASIS25/advText01.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/data/CASIS25/advText00.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/data/CASIS25/1000_1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="64" lean-forward="true" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/AdversarialTestResults.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Project-5/GFES.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="327" column="18" selection-start-line="327" selection-start-column="18" selection-end-line="327" selection-end-column="18" />
+        <state relative-caret-position="189">
+          <caret line="167" column="13" selection-start-line="167" selection-start-column="13" selection-end-line="167" selection-end-column="13" />
           <folding>
             <element signature="e#55#64#0" expanded="true" />
           </folding>

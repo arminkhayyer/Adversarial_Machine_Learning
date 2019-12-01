@@ -1,0 +1,6 @@
+advText00 1000
+advText01 1024
+advText02 1024
+advText03 1023
+advText04 1024
+advText05 1023

@@ -158,10 +158,15 @@ def Baselin_predict(mask):
         fold_accuracy.append(mlp_acc)
     print(np.mean(fold_accuracy))
     CU_pred_data = dense.transform(tfidf.transform(x_pred))
+
     CU_pred_data = scaler.transform(CU_pred_data)
     CU_pred_data = normalize(CU_pred_data)
-    mlp.predict(CU_pred_data)
-
+    print(CU_pred_data[0].shape)
+    pred = [mlp.predict(i.reshape(1, -1))[0] for i in CU_pred_data]
+    df_test["pred"] = pred
+    df_out = df_test[[0, "pred"]]
+    df_res = df_out.sort_values(by=[0])
+    df_res.to_csv("AdversarialTestResults.txt", header=None, index=None, sep=' ')
 
 
 class anIndividual:
@@ -321,36 +326,39 @@ class aSimpleExploratoryAttacker:
     #     ax1.set_zlim3d(0.2,1.0)
     #     plt.show()
 
+try:
+    mask = np.load("mask.npy")
+except:
+    simplefilter(action='ignore', category=FutureWarning)
 
-simplefilter(action='ignore', category=FutureWarning)
+    ChromLength = 7641
+    MaxEvaluations = 4
 
-ChromLength = 7641
-MaxEvaluations = 4
+    PopSize = 3
+    mu_amt = 0.01
 
-PopSize = 3
-mu_amt = 0.01
+    simple_exploratory_attacker = aSimpleExploratoryAttacker(chromosome_length=ChromLength, mutation_rate=mu_amt,
+                                                             population_size=PopSize)
 
-simple_exploratory_attacker = aSimpleExploratoryAttacker(chromosome_length=ChromLength, mutation_rate=mu_amt,
-                                                         population_size=PopSize)
+    simple_exploratory_attacker.generate_initial_population()
+    simple_exploratory_attacker.print_population()
+    best = 0
+    for i in range(MaxEvaluations - PopSize):
+        best = i
+        simple_exploratory_attacker.evolutionary_cycle()
+        if (i % PopSize == 0):
+            print("At Iteration: " + str(i))
+            simple_exploratory_attacker.print_population()
 
-simple_exploratory_attacker.generate_initial_population()
-simple_exploratory_attacker.print_population()
-best = 0
-for i in range(MaxEvaluations - PopSize):
-    best = i
-    simple_exploratory_attacker.evolutionary_cycle()
-    if (i % PopSize == 0):
-        print("At Iteration: " + str(i))
-        simple_exploratory_attacker.print_population()
+    print("\nFinal Population\n")
+    simple_exploratory_attacker.print_population()
+    best_indiv = simple_exploratory_attacker.print_best_max_fitness()
+    print("Function Evaluations: " + str(i))
+    # simple_exploratory_attacker.plot_evolved_candidate_solutions()
+    mask = np.arry(best_indiv.chromosome)
+    print(best_indiv.fitness)
+    np.save('mask.npy', mask)
 
-print("\nFinal Population\n")
-simple_exploratory_attacker.print_population()
-best_indiv = simple_exploratory_attacker.print_best_max_fitness()
-print("Function Evaluations: " + str(i))
-# simple_exploratory_attacker.plot_evolved_candidate_solutions()
-row = best_indiv.chromosome
-print(best_indiv.fitness)
-np.save('mask.npy', row)
-print(Baselin_predict(row))
+Baselin_predict(mask)
 
 
