@@ -21,37 +21,25 @@ import zipfile
 import string
 import pandas as pd
 from warnings import simplefilter
+import pickle
+from sklearn.model_selection import train_test_split
 
 
-def unigram():
-    my_zip = zipfile.ZipFile("CASIS-25_Dataset.zip")
-    all_files = my_zip.namelist()
-    all_files = sorted(all_files)
-    look_up_table = sorted([i for i in string.printable])
-    look_up_table = look_up_table[5:]
-    feature_df = pd.DataFrame(columns=look_up_table)
-
-    for file in all_files:
-        feature_df.loc[file] = 0
-        f = my_zip.open(file)
-        for line in f:
-            for ch in line:
-                char = chr(ch)
-                if char in look_up_table:
-                    feature_df.loc[file, char] += 1
-
-    feature_df = feature_df.reset_index()
-    feature_df["label"] = feature_df.apply(lambda row: row["index"][:4], 1)
-    feature_df = feature_df.drop(["index"], 1)
-    return feature_df
 
 
-try:
-    feature_df = pd.read_csv("features.csv", sep=",")
-except:
-    feature_df = unigram()
-    feature_df.to_csv("features.csv", sep=",", index=False)
+df = pd.read_csv('data/train/casis25_ncu.txt', header=None)
 
+features = ['casis25_char-gram_gram=3-limit=1000.txt', 'casis25_bow.txt', 'casis25_sty.txt']
+
+for feature in features:
+    df_feature = pd.read_csv("datasets/" + feature, header=None)
+    df = pd.merge(df, df_feature, on=0, how="left")
+    print(df_feature.shape)
+    print('adding {}'.format(feature))
+
+df["label"] = df[0].map(lambda x: str(x)[0:4])
+df = df.drop(df.columns[[0]], axis=1)
+feature_df = df
 
 def feature_selection(mask):
     df_x = feature_df.drop(["label"], 1)
@@ -60,12 +48,11 @@ def feature_selection(mask):
     y = np.array(feature_df["label"])
     return x, y
 
-
 def Baselin(mask):
     CU_X, Y = feature_selection(mask)
 
-    rbfsvm = svm.SVC()
-    lsvm = svm.LinearSVC()
+    # rbfsvm = svm.SVC()
+    # lsvm = svm.LinearSVC()
     mlp = MLPClassifier(max_iter=2000)
 
     skf = StratifiedKFold(n_splits=4, shuffle=True, random_state=0)
@@ -101,16 +88,74 @@ def Baselin(mask):
         eval_data = CU_eval_data
 
         # evaluation
-        rbfsvm.fit(train_data, train_labels)
-        lsvm.fit(train_data, train_labels)
+        # rbfsvm.fit(train_data, train_labels)
+        # lsvm.fit(train_data, train_labels)
         mlp.fit(train_data, train_labels)
 
-        rbfsvm_acc = rbfsvm.score(eval_data, eval_labels)
-        lsvm_acc = lsvm.score(eval_data, eval_labels)
+        # rbfsvm_acc = rbfsvm.score(eval_data, eval_labels)
+        # lsvm_acc = lsvm.score(eval_data, eval_labels)
         mlp_acc = mlp.score(eval_data, eval_labels)
 
-        fold_accuracy.append((lsvm_acc, rbfsvm_acc, mlp_acc))
-    return (np.mean(fold_accuracy, axis=0))
+        fold_accuracy.append(mlp_acc)
+    return (np.mean(fold_accuracy))
+
+
+def baseline_save(mask):
+    CU_X, Y = feature_selection(mask)
+
+    # rbfsvm = svm.SVC()
+    # lsvm = svm.LinearSVC()
+    mlp = MLPClassifier(max_iter=2000)
+
+    skf = StratifiedKFold(n_splits=4, shuffle=True, random_state=0)
+    fold_accuracy = []
+
+    scaler = StandardScaler()
+    tfidf = TfidfTransformer(norm=None)
+    dense = Data_Utils.DenseTransformer()
+    for train, test in skf.split(CU_X, Y):
+        # train split
+        CU_train_data = CU_X[train]
+        train_labels = Y[train]
+
+        # test split
+        CU_eval_data = CU_X[test]
+        eval_labels = Y[test]
+
+        # tf-idf
+        tfidf.fit(CU_train_data)
+        CU_train_data = dense.transform(tfidf.transform(CU_train_data))
+        CU_eval_data = dense.transform(tfidf.transform(CU_eval_data))
+
+        # standardization
+        scaler.fit(CU_train_data)
+        CU_train_data = scaler.transform(CU_train_data)
+        CU_eval_data = scaler.transform(CU_eval_data)
+
+        # normalization
+        CU_train_data = normalize(CU_train_data)
+        CU_eval_data = normalize(CU_eval_data)
+
+        train_data = CU_train_data
+        eval_data = CU_eval_data
+
+        # evaluation
+        # rbfsvm.fit(train_data, train_labels)
+        # lsvm.fit(train_data, train_labels)
+        mlp.fit(train_data, train_labels)
+
+        # rbfsvm_acc = rbfsvm.score(eval_data, eval_labels)
+        # lsvm_acc = lsvm.score(eval_data, eval_labels)
+        mlp_acc = mlp.score(eval_data, eval_labels)
+        fold_accuracy.append(mlp_acc)
+        acc = np.mean(fold_accuracy)
+        print(acc)
+    filename = 'finalized_model.sav'
+    pickle.dump(mlp, open(filename, 'wb'))
+    np.save('mask.npy', mask)
+
+
+
 
 
 class anIndividual:
@@ -124,15 +169,14 @@ class anIndividual:
 
     def randomly_generate(self):
         for i in range(self.chromosome_length):
-            self.chromosome.append(random.choice([True, False]))
+            self.chromosome.append(random.choice([True, False, True]))
 
     def calculate_fitness(self):
-        self.fitness_RBFSVM, self.fitness_LSVM, self.fitness_MLP = Baselin(self.chromosome)
-        self.fitness = (self.fitness_RBFSVM + self.fitness_LSVM + self.fitness_MLP) / 3
+        self.fitness = Baselin(self.chromosome)
 
     def print_individual(self, i):
         print("Chromosome - " + str(i) + "- number of features: " + str(sum(self.chromosome)) + " Fitness: " + str(
-            self.fitness), " Fitness-tuple: " + str(self.fitness_RBFSVM), str(self.fitness_LSVM), str(self.fitness_MLP))
+            self.fitness))
 
 
 class aSimpleExploratoryAttacker:
@@ -273,40 +317,33 @@ class aSimpleExploratoryAttacker:
 
 
 simplefilter(action='ignore', category=FutureWarning)
-look_up_table = sorted([i for i in string.printable])
-look_up_table = look_up_table[5:]
-look_up_table = look_up_table + ["fitness", "fitness_lsvm", "fitness_RBFSVM", "fitness_MLP"]
-results = pd.DataFrame(columns=look_up_table)
 
-for rep in range(10):
-    ChromLength = 95
-    MaxEvaluations = 1000
+ChromLength = 7641
+MaxEvaluations = 10
 
-    PopSize = 50
-    mu_amt = 0.01
+PopSize = 5
+mu_amt = 0.01
 
-    simple_exploratory_attacker = aSimpleExploratoryAttacker(chromosome_length=ChromLength, mutation_rate=mu_amt,
-                                                             population_size=PopSize)
+simple_exploratory_attacker = aSimpleExploratoryAttacker(chromosome_length=ChromLength, mutation_rate=mu_amt,
+                                                         population_size=PopSize)
 
-    simple_exploratory_attacker.generate_initial_population()
-    simple_exploratory_attacker.print_population()
-    best = 0
-    for i in range(MaxEvaluations - PopSize):
-        best = i
-        simple_exploratory_attacker.evolutionary_cycle()
-        if (i % PopSize == 0):
-            print("At Iteration: " + str(i))
-            simple_exploratory_attacker.print_population()
+simple_exploratory_attacker.generate_initial_population()
+simple_exploratory_attacker.print_population()
+best = 0
+for i in range(MaxEvaluations - PopSize):
+    best = i
+    simple_exploratory_attacker.evolutionary_cycle()
+    if (i % PopSize == 0):
+        print("At Iteration: " + str(i))
+        simple_exploratory_attacker.print_population()
 
-    print("\nFinal Population\n")
-    simple_exploratory_attacker.print_population()
-    best_indiv = simple_exploratory_attacker.print_best_max_fitness()
-    print("Function Evaluations: " + str(i))
-    # simple_exploratory_attacker.plot_evolved_candidate_solutions()
-    row = best_indiv.chromosome + [best_indiv.fitness, best_indiv.fitness_LSVM, best_indiv.fitness_RBFSVM,
-                                   best_indiv.fitness_MLP]
-    results.loc[rep, :] = row
+print("\nFinal Population\n")
+simple_exploratory_attacker.print_population()
+best_indiv = simple_exploratory_attacker.print_best_max_fitness()
+print("Function Evaluations: " + str(i))
+# simple_exploratory_attacker.plot_evolved_candidate_solutions()
+row = best_indiv.chromosome
+print(best_indiv.fitness)
+baseline_save(row)
 
-print(results)
-results.to_csv("final_results.csv", sep=",")
 

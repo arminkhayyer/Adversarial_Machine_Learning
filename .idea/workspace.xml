@@ -2,246 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53a11553-8514-4f78-873a-a450f6cf6d47" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Project-3/.idea/Project-3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-3/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-3/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-3/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-3/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-3/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/.idea/Project-5.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/.idea/dictionaries/bhargavjoshi.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/Baseline.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/BaselineSklearn.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/Data_Utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/Extractor/DatasetInfo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/Extractor/Extractors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/KerasNN.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1000/1000_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1000/1000_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1000/1000_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1000/1000_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1001/1001_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1001/1001_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1001/1001_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1001/1001_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1002/1002_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1002/1002_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1002/1002_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1002/1002_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1003/1003_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1003/1003_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1003/1003_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1003/1003_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1004/1004_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1004/1004_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1004/1004_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1004/1004_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1005/1005_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1005/1005_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1005/1005_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1005/1005_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1006/1006_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1006/1006_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1006/1006_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1006/1006_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1007/1007_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1007/1007_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1007/1007_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1007/1007_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1008/1008_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1008/1008_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1008/1008_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1008/1008_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1009/1009_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1009/1009_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1009/1009_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1009/1009_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1010/1010_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1010/1010_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1010/1010_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1010/1010_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1011/1011_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1011/1011_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1011/1011_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1011/1011_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1012/1012_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1012/1012_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1012/1012_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1012/1012_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1013/1013_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1013/1013_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1013/1013_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1013/1013_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1014/1014_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1014/1014_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1014/1014_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1014/1014_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1015/1015_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1015/1015_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1015/1015_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1015/1015_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1016/1016_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1016/1016_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1016/1016_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1016/1016_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1017/1017_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1017/1017_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1017/1017_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1017/1017_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1018/1018_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1018/1018_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1018/1018_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1018/1018_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1019/1019_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1019/1019_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1019/1019_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1019/1019_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1020/1020_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1020/1020_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1020/1020_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1020/1020_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1021/1021_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1021/1021_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1021/1021_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1021/1021_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1022/1022_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1022/1022_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1022/1022_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1022/1022_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1023/1023_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1023/1023_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1023/1023_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1023/1023_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1024/1024_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1024/1024_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1024/1024_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25-dir/1024/1024_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1000_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1000_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1000_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1000_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1001_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1001_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1001_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1001_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1002_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1002_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1002_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1002_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1003_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1003_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1003_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1003_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1004_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1004_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1004_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1004_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1005_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1005_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1005_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1005_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1006_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1006_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1006_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1006_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1007_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1007_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1007_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1007_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1008_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1008_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1008_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1008_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1009_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1009_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1009_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1009_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1010_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1010_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1010_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1010_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1011_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1011_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1011_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1011_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1012_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1012_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1012_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1012_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1013_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1013_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1013_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1013_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1014_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1014_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1014_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1014_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1015_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1015_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1015_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1015_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1016_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1016_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1016_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1016_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1017_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1017_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1017_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1017_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1018_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1018_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1018_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1018_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1019_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1019_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1019_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1019_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1020_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1020_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1020_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1020_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1021_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1021_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1021_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1021_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1022_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1022_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1022_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1022_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1023_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1023_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1023_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1023_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1024_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1024_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1024_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/data/CASIS25/1024_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/datasets/X_test.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/datasets/X_train.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/datasets/Y_test.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/datasets/Y_train.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/datasets/casis25.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/datasets/casis25_bow.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/datasets/casis25_char-gram_gram=3-limit=1000.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/datasets/casis25_ncu.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/datasets/casis25_sty.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/datasets/preprocessing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project-5/setup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_4/Paper.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_4/Results/CASIS-25_CU.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-3/FFNN_B.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/FFNN_B.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_4/features.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Project_4/Results/features_list.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_4/final_results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Project_4/Results/final_results.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_4/unigram.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project_4/unigram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-5/GFES.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/GFES.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-5/data/AdversarialTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/data/AdversarialTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25.info" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/datasets/casis25.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_bow.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/datasets/casis25_bow.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_char-gram_gram=3-limit=1000.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/datasets/casis25_char-gram_gram=3-limit=1000.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_ncu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/datasets/casis25_ncu.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-5/datasets/casis25_sty.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/datasets/casis25_sty.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-5/datasets/preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/datasets/preprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-5/predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/predictor.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -251,34 +21,100 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Adversarial_m$FFNN_B.coverage" NAME="FFNN_B Coverage Results" MODIFIED="1571529764014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
     <SUITE FILE_PATH="coverage/Adversarial_m$simpleNeuralNetworkv__2_.coverage" NAME="simpleNeuralNetworkv (2) Coverage Results" MODIFIED="1571624426169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
     <SUITE FILE_PATH="coverage/Adversarial_m$GEFS.coverage" NAME="GEFS Coverage Results" MODIFIED="1572812148262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project_4" />
-    <SUITE FILE_PATH="coverage/Adversarial_m$BaselineMLTs.coverage" NAME="BaselineMLTs Coverage Results" MODIFIED="1572282778812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project_4" />
+    <SUITE FILE_PATH="coverage/Adversarial_m$KerasNN.coverage" NAME="KerasNN Coverage Results" MODIFIED="1575144538713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-5" />
+    <SUITE FILE_PATH="coverage/Adversarial_m$main.coverage" NAME="main Coverage Results" MODIFIED="1575142272197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-5" />
     <SUITE FILE_PATH="coverage/Adversarial_m$GRNN_A.coverage" NAME="GRNN_A Coverage Results" MODIFIED="1571624541760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
-    <SUITE FILE_PATH="coverage/Adversarial_m$RBFNN.coverage" NAME="RBFNN Coverage Results" MODIFIED="1571529677593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
+    <SUITE FILE_PATH="coverage/Adversarial_m$setup.coverage" NAME="setup Coverage Results" MODIFIED="1575140920617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-5" />
     <SUITE FILE_PATH="coverage/Adversarial_m$unigram.coverage" NAME="unigram Coverage Results" MODIFIED="1572245324761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project_4" />
     <SUITE FILE_PATH="coverage/Adversarial_m$Master_PSO.coverage" NAME="Master-PSO Coverage Results" MODIFIED="1570568158417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-2" />
     <SUITE FILE_PATH="coverage/Adversarial_m$GRNN_B.coverage" NAME="GRNN_B Coverage Results" MODIFIED="1571535645462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
+    <SUITE FILE_PATH="coverage/Adversarial_m$BaselineSklearn.coverage" NAME="BaselineSklearn Coverage Results" MODIFIED="1575141544873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-5" />
+    <SUITE FILE_PATH="coverage/Adversarial_m$GFES.coverage" NAME="GFES Coverage Results" MODIFIED="1575160688777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-5" />
+    <SUITE FILE_PATH="coverage/Adversarial_m$FFNN_B.coverage" NAME="FFNN_B Coverage Results" MODIFIED="1571529764014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
+    <SUITE FILE_PATH="coverage/Adversarial_m$BaselineMLTs.coverage" NAME="BaselineMLTs Coverage Results" MODIFIED="1572282778812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project_4" />
+    <SUITE FILE_PATH="coverage/Adversarial_m$preprocessing.coverage" NAME="preprocessing Coverage Results" MODIFIED="1575148937790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-5/datasets" />
+    <SUITE FILE_PATH="coverage/Adversarial_m$RBFNN.coverage" NAME="RBFNN Coverage Results" MODIFIED="1571529677593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
     <SUITE FILE_PATH="coverage/Adversarial_m$steady_stateGA.coverage" NAME="steady_stateGA Coverage Results" MODIFIED="1568650851817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Adversarial_m$bonus_point.coverage" NAME="bonus_point Coverage Results" MODIFIED="1571613178617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
     <SUITE FILE_PATH="coverage/Adversarial_m$GEFS__1_.coverage" NAME="GEFS (1) Coverage Results" MODIFIED="1572808995775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project_4" />
     <SUITE FILE_PATH="coverage/Adversarial_m$ring_synchronous_PSO.coverage" NAME="ring_synchronous_PSO Coverage Results" MODIFIED="1569578861335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-2" />
     <SUITE FILE_PATH="coverage/Adversarial_m$prac.coverage" NAME="prac Coverage Results" MODIFIED="1572818303829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project_4" />
     <SUITE FILE_PATH="coverage/Adversarial_m$BaselineMLTs__1_.coverage" NAME="BaselineMLTs (1) Coverage Results" MODIFIED="1572925270902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project_4" />
+    <SUITE FILE_PATH="coverage/Adversarial_m$predictor.coverage" NAME="predictor Coverage Results" MODIFIED="1575160697926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-5" />
     <SUITE FILE_PATH="coverage/Adversarial_m$GA_master.coverage" NAME="GA-master Coverage Results" MODIFIED="1568879721293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Adversarial_m$hw4.coverage" NAME="hw4 Coverage Results" MODIFIED="1572636090447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/group_assignemnt4" />
     <SUITE FILE_PATH="coverage/Adversarial_m$GRNN_B2.coverage" NAME="GRNN_B2 Coverage Results" MODIFIED="1572204916665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project-3" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BaselineMLTs.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Project_4/BaselineMLTs.py">
+      <file leaf-file-name="Data_Utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project-5/Data_Utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="58" column="20" lean-forward="true" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+            <state relative-caret-position="-854">
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Baseline.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project-5/Baseline.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project-5/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="436">
+              <caret line="45" column="17" selection-start-line="8" selection-start-column="4" selection-end-line="45" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#17#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="predictor.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project-5/predictor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GFES.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Project-5/GFES.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-129">
+              <caret line="49" lean-forward="true" selection-start-line="29" selection-end-line="49" />
+              <folding>
+                <element signature="e#55#64#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Extractors.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project-5/Extractor/Extractors.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-51">
+              <caret line="38" column="17" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -302,6 +138,10 @@
       <find>print</find>
       <find>Get_Casis_CUDataset</find>
       <find>print_individual</find>
+      <find>Data_Utils</find>
+      <find>Baselin</find>
+      <find>rand</find>
+      <find>data</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -326,9 +166,14 @@
         <option value="$PROJECT_DIR$/Project-4/GEFS.py" />
         <option value="$PROJECT_DIR$/group_assignemnt4/hw4.py" />
         <option value="$PROJECT_DIR$/group_assignemnt4/plot.py" />
-        <option value="$PROJECT_DIR$/Project_4/GEFS.py" />
         <option value="$PROJECT_DIR$/Project_4/prac.py" />
         <option value="$PROJECT_DIR$/Project_4/BaselineMLTs.py" />
+        <option value="$PROJECT_DIR$/Project-5/BaselineSklearn.py" />
+        <option value="$PROJECT_DIR$/Project-5/datasets/preprocessing.py" />
+        <option value="$PROJECT_DIR$/Project_4/GEFS.py" />
+        <option value="$PROJECT_DIR$/Project-5/data/AdversarialTests.txt" />
+        <option value="$PROJECT_DIR$/Project-5/GFES.py" />
+        <option value="$PROJECT_DIR$/Project-5/predictor.py" />
       </list>
     </option>
   </component>
@@ -366,7 +211,7 @@
             <path>
               <item name="Adversarial_m" type="b2602c69:ProjectViewProjectNode" />
               <item name="Adversarial_m" type="462c0819:PsiDirectoryNode" />
-              <item name="Project_4" type="462c0819:PsiDirectoryNode" />
+              <item name="Project-5" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -383,13 +228,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Project-5/data/train" />
+      <recent name="$PROJECT_DIR$/Project-5/data/AdversarialTest" />
       <recent name="$PROJECT_DIR$/group_assignemnt4" />
       <recent name="$PROJECT_DIR$/project_4" />
       <recent name="$PROJECT_DIR$/Project-3" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -404,8 +251,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.BaselineMLTs (1)">
-    <configuration name="BaselineMLTs (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.predictor">
+    <configuration name="GFES" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Adversarial_m" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -413,18 +260,18 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project_4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project-5" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project_4/BaselineMLTs.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project-5/GFES.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="GEFS (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="KerasNN" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Adversarial_m" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -432,18 +279,18 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project_4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project-5" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project_4/GEFS.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project-5/KerasNN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="GEFS" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Adversarial_m" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -451,18 +298,18 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project_4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project-5" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project_4/GEFS.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project-5/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="hw4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="predictor" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Adversarial_m" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -470,18 +317,18 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/group_assignemnt4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project-5" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/group_assignemnt4/hw4.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project-5/predictor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="prac" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="preprocessing" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Adversarial_m" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -489,31 +336,31 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project_4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project-5/datasets" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project_4/prac.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project-5/datasets/preprocessing.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.GEFS" />
-      <item itemvalue="Python.hw4" />
-      <item itemvalue="Python.BaselineMLTs (1)" />
-      <item itemvalue="Python.GEFS (1)" />
-      <item itemvalue="Python.prac" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.KerasNN" />
+      <item itemvalue="Python.preprocessing" />
+      <item itemvalue="Python.GFES" />
+      <item itemvalue="Python.predictor" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.BaselineMLTs (1)" />
-        <item itemvalue="Python.prac" />
-        <item itemvalue="Python.GEFS" />
-        <item itemvalue="Python.GEFS (1)" />
-        <item itemvalue="Python.hw4" />
+        <item itemvalue="Python.predictor" />
+        <item itemvalue="Python.GFES" />
+        <item itemvalue="Python.preprocessing" />
+        <item itemvalue="Python.KerasNN" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -612,12 +459,12 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5007153" side_tool="true" visible="true" weight="0.37333333" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50143063" side_tool="true" weight="0.37333333" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32969698" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32969698" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.35636362" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49928468" visible="true" weight="0.37333333" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4985694" visible="true" weight="0.37333333" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23390558" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
@@ -633,6 +480,29 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23390558" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32969698" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.27968526" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.35636362" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32969698" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4985694" visible="true" weight="0.37333333" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50143063" side_tool="true" weight="0.37333333" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -647,120 +517,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/arminkhayyer/Adversarial_m&#10;&#10;# Conflicts:&#10;#&#9;.DS_Store" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Project_4/BaselineMLTs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="59" column="43" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project_4/BaselineMLTs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="58" column="34" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project_4/GEFS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4140">
-          <caret line="293" column="31" selection-start-line="293" selection-start-column="4" selection-end-line="293" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project_4/GEFS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project_4/GEFS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project-3/GRNN_A.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2280">
-          <caret line="160" column="8" selection-start-line="160" selection-start-column="8" selection-end-line="160" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project-3/GRNN_B2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6780">
-          <caret line="460" column="20" selection-start-line="460" selection-start-column="20" selection-end-line="460" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project-3/bonus_point.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project-1/GA-master.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="121" column="47" selection-start-line="111" selection-start-column="12" selection-end-line="121" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project-3/GRNN_A.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3060">
-          <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project-3/simpleNeuralNetworkv (2).py" />
-    <entry file="file://$PROJECT_DIR$/Project-1/steady_stateGA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2700">
-          <caret line="185" selection-start-line="185" selection-end-line="185" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project-2/ring_synchronous_PSO.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="38" column="67" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project-1/steady_stateGA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2775">
-          <caret line="185" lean-forward="true" selection-start-line="185" selection-end-line="185" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project-2/ring_synchronous_PSO.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
-          <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GA-master.py" />
-    <entry file="file://$PROJECT_DIR$/simpleExploratoryAttacker.py" />
-    <entry file="file://$PROJECT_DIR$/steady_stateGA.py" />
-    <entry file="file://$USER_HOME$/Downloads/armin_khayyer.ipynb" />
-    <entry file="file://$PROJECT_DIR$/steady_stateGA.py" />
-    <entry file="file://$PROJECT_DIR$/generational.py" />
-    <entry file="file://$PROJECT_DIR$/SteadyGen-GA_version_Armin.csv" />
-    <entry file="file://$PROJECT_DIR$/GA-master.py" />
-    <entry file="file://$PROJECT_DIR$/simpleExploratoryAttacker.py" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -859,13 +615,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project_4/prac.py" />
-    <entry file="file://$PROJECT_DIR$/Project_4/GEFS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4395">
-          <caret line="293" column="31" selection-start-line="293" selection-start-column="4" selection-end-line="293" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project_4/final_results.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-216" />
@@ -888,12 +637,188 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/setup.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Project_4/BaselineMLTs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="58" column="20" lean-forward="true" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+        <state relative-caret-position="490">
+          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/datasets/X_test.npy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3225" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/datasets/casis25_sty.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/Extractor/DatasetInfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/KerasNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/datasets/casis25.info">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project_4/GEFS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="59" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/datasets/preprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="20" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/mask.npy">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/finalized_model.sav">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project_4/CASIS-25_CU.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project_4/Results/CASIS-25_CU.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project_4/Results/final_results.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project_4/Results/features_list.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/BaselineSklearn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-374">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/data/CASIS25/1000_1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="64" lean-forward="true" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/Baseline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/data/AdversarialTest/1000_1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/datasets/test_ncu.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/datasets/test_sty.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/data/AdversarialTest/1000_4.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/datasets/test.info">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/Data_Utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-854">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/datasets/casis25_bow.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6983" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/data/train/casis25.info">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/data/AdversarialTests.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/Extractor/Extractors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="38" column="17" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="45" column="17" selection-start-line="8" selection-start-column="4" selection-end-line="45" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/predictor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project-5/GFES.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-129">
+          <caret line="49" lean-forward="true" selection-start-line="29" selection-end-line="49" />
+          <folding>
+            <element signature="e#55#64#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -11,6 +11,7 @@ for feature in features:
     print(df_feature.shape)
     print('adding {}'.format(feature))
 
+print(df)
 # print(df.shape)
 labels = df[0].map(lambda x: str(x)[0:4])
 labels = pd.get_dummies(labels, prefix=None,drop_first=False)
