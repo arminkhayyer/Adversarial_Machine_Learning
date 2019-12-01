@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@author: Armin Khayyer, Bhargav Joshi
+@author: Bhargav Joshi, Armin Khayyer
 """
 import os
 import random
