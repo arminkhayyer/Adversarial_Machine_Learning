@@ -150,8 +150,8 @@ for i in range(4):
     # print(labels[0], data[0])
 print("Done")
 
-df_test = pd.read_csv('datasets/casis25_ncu.txt', header=None)
-features_test = ['casis25_char-gram_gram=3-limit=1000.txt', 'casis25_bow.txt', 'casis25_sty.txt']
+df_test = pd.read_csv('datasets/casis25_test_ncu.txt', header=None)
+features_test = ['casis25_test_char-gram_gram=3-limit=1000.txt', 'casis25_test_bow.txt', 'casis25_test_sty.txt']
 
 for feature in features_test:
     df_feature = pd.read_csv("datasets/" + feature, header=None)

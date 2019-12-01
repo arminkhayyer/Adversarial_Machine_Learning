@@ -27,7 +27,7 @@ from sklearn.model_selection import train_test_split
 
 
 
-df = pd.read_csv('data/train/casis25_ncu.txt', header=None)
+df = pd.read_csv('datasets/casis25_ncu.txt', header=None)
 
 features = ['casis25_char-gram_gram=3-limit=1000.txt', 'casis25_bow.txt', 'casis25_sty.txt']
 
@@ -38,11 +38,12 @@ for feature in features:
     print('adding {}'.format(feature))
 
 df["label"] = df[0].map(lambda x: str(x)[0:4])
-df = df.drop(df.columns[[0]], axis=1)
-feature_df = df
+df_train = df.loc[df.label.str[0]=="1", :]
+df_test = df.loc[df.label.str[0]!="1", :]
+feature_df = df_train
 
 def feature_selection(mask):
-    df_x = feature_df.drop(["label"], 1)
+    df_x = feature_df.drop(["label", 0], 1)
     df_x = df_x.loc[:, mask]
     x = np.array(df_x)
     y = np.array(feature_df["label"])
@@ -98,6 +99,69 @@ def Baselin(mask):
 
         fold_accuracy.append(mlp_acc)
     return (np.mean(fold_accuracy))
+
+
+
+def Baselin_predict(mask):
+    df_pred_x = df_test.drop(["label", 0], 1)
+    df_pred_x = df_pred_x.loc[:, mask]
+    x_pred = np.array(df_pred_x)
+
+    CU_X, Y = feature_selection(mask)
+
+    # rbfsvm = svm.SVC()
+    # lsvm = svm.LinearSVC()
+    mlp = MLPClassifier(max_iter=2000)
+
+    skf = StratifiedKFold(n_splits=4, shuffle=True, random_state=0)
+    fold_accuracy = []
+
+    scaler = StandardScaler()
+    tfidf = TfidfTransformer(norm=None)
+    dense = Data_Utils.DenseTransformer()
+
+    for train, test in skf.split(CU_X, Y):
+        # train split
+        CU_train_data = CU_X[train]
+        train_labels = Y[train]
+
+        # test split
+        CU_eval_data = CU_X[test]
+        eval_labels = Y[test]
+
+        # tf-idf
+        tfidf.fit(CU_train_data)
+        CU_train_data = dense.transform(tfidf.transform(CU_train_data))
+        CU_eval_data = dense.transform(tfidf.transform(CU_eval_data))
+
+        # standardization
+        scaler.fit(CU_train_data)
+        CU_train_data = scaler.transform(CU_train_data)
+        CU_eval_data = scaler.transform(CU_eval_data)
+
+        # normalization
+        CU_train_data = normalize(CU_train_data)
+        CU_eval_data = normalize(CU_eval_data)
+
+        train_data = CU_train_data
+        eval_data = CU_eval_data
+
+        # evaluation
+        # rbfsvm.fit(train_data, train_labels)
+        # lsvm.fit(train_data, train_labels)
+        mlp.fit(train_data, train_labels)
+
+        # rbfsvm_acc = rbfsvm.score(eval_data, eval_labels)
+        # lsvm_acc = lsvm.score(eval_data, eval_labels)
+        mlp_acc = mlp.score(eval_data, eval_labels)
+
+        fold_accuracy.append(mlp_acc)
+    print(np.mean(fold_accuracy))
+    CU_pred_data = dense.transform(tfidf.transform(x_pred))
+    CU_pred_data = scaler.transform(CU_pred_data)
+    CU_pred_data = normalize(CU_pred_data)
+    mlp.predict(CU_pred_data)
+
 
 
 class anIndividual:
@@ -261,9 +325,9 @@ class aSimpleExploratoryAttacker:
 simplefilter(action='ignore', category=FutureWarning)
 
 ChromLength = 7641
-MaxEvaluations = 10
+MaxEvaluations = 4
 
-PopSize = 5
+PopSize = 3
 mu_amt = 0.01
 
 simple_exploratory_attacker = aSimpleExploratoryAttacker(chromosome_length=ChromLength, mutation_rate=mu_amt,
@@ -287,5 +351,6 @@ print("Function Evaluations: " + str(i))
 row = best_indiv.chromosome
 print(best_indiv.fitness)
 np.save('mask.npy', row)
+print(Baselin_predict(row))
 
 
