@@ -26,8 +26,9 @@ def extract_features():
     feature_set_dir = "./datasets/"
 
     print("Extracting Features...")
+    extractors = ['Unigram', 'Stylometry', 'Bag of Word', 'Character Gram (n=3)']
     for i in range(4):
-        print(4-i)
+        print(extractors[i])
         if i == 0:
             extractor = Unigram(data_dir + "CASIS25/", "casis25")
         elif i == 1:
@@ -382,9 +383,9 @@ except:
     simplefilter(action='ignore', category=FutureWarning)
 
     ChromLength = len(df.columns) - 2
-    MaxEvaluations = 4
+    MaxEvaluations = 30
 
-    PopSize = 3
+    PopSize = 10
     mu_amt = 0.01
 
     simple_exploratory_attacker = aSimpleExploratoryAttacker(chromosome_length=ChromLength, mutation_rate=mu_amt,
