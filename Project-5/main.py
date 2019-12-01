@@ -1,4 +1,5 @@
 import Data_Utils
+import pandas as pd
 from Extractor.DatasetInfo import DatasetInfo
 from Extractor.Extractors import BagOfWords, Stylomerty, Unigram, CharacterGram
 
@@ -20,8 +21,24 @@ if __name__ == "__main__":
         lookup_table = extractor.lookup_table
         print("Generated Lookup Table:")
         # print(lookup_table)
+        col = []
         if lookup_table is not False:
             print("'" + "', '".join([str("".join(x)).replace("\n", " ") for x in lookup_table]) + "'")
+            for x in lookup_table:
+                col.append("'" + "', '".join([str("".join(x)).replace("\n", " ")]) + "'")
+            generated_file = feature_set_dir + extractor.out_file + ".txt"
+            generated_csv_file = feature_set_dir + extractor.out_file + ".csv"
+            data, labels = Data_Utils.get_dataset(generated_file)
+            df = pd.DataFrame(data, columns=col)
+            df.insert(0, "Label", labels, True)
+            df.to_csv(generated_csv_file)
+        else:
+            generated_file = feature_set_dir + extractor.out_file + ".txt"
+            generated_csv_file = feature_set_dir + extractor.out_file + ".csv"
+            data, labels = Data_Utils.get_dataset(generated_file)
+            df = pd.DataFrame(data)
+            df.insert(0, "Label", labels, True)
+            df.to_csv(generated_csv_file)
 
         # Get dataset information
         dataset_info = DatasetInfo("casis25_bow")
@@ -40,7 +57,5 @@ if __name__ == "__main__":
         print("\n\nThe author of the writing sample 1000_1")
         print(writing_samples["1000_1"])
 
-        generated_file = feature_set_dir + extractor.out_file + ".txt"
-        data, labels = Data_Utils.get_dataset(generated_file)
         # print(labels[0], data[0])
     print("Done")
