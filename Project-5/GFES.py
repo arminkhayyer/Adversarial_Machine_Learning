@@ -100,64 +100,6 @@ def Baselin(mask):
     return (np.mean(fold_accuracy))
 
 
-def baseline_save(mask):
-    CU_X, Y = feature_selection(mask)
-
-    # rbfsvm = svm.SVC()
-    # lsvm = svm.LinearSVC()
-    mlp = MLPClassifier(max_iter=2000)
-
-    skf = StratifiedKFold(n_splits=4, shuffle=True, random_state=0)
-    fold_accuracy = []
-
-    scaler = StandardScaler()
-    tfidf = TfidfTransformer(norm=None)
-    dense = Data_Utils.DenseTransformer()
-    for train, test in skf.split(CU_X, Y):
-        # train split
-        CU_train_data = CU_X[train]
-        train_labels = Y[train]
-
-        # test split
-        CU_eval_data = CU_X[test]
-        eval_labels = Y[test]
-
-        # tf-idf
-        tfidf.fit(CU_train_data)
-        CU_train_data = dense.transform(tfidf.transform(CU_train_data))
-        CU_eval_data = dense.transform(tfidf.transform(CU_eval_data))
-
-        # standardization
-        scaler.fit(CU_train_data)
-        CU_train_data = scaler.transform(CU_train_data)
-        CU_eval_data = scaler.transform(CU_eval_data)
-
-        # normalization
-        CU_train_data = normalize(CU_train_data)
-        CU_eval_data = normalize(CU_eval_data)
-
-        train_data = CU_train_data
-        eval_data = CU_eval_data
-
-        # evaluation
-        # rbfsvm.fit(train_data, train_labels)
-        # lsvm.fit(train_data, train_labels)
-        mlp.fit(train_data, train_labels)
-
-        # rbfsvm_acc = rbfsvm.score(eval_data, eval_labels)
-        # lsvm_acc = lsvm.score(eval_data, eval_labels)
-        mlp_acc = mlp.score(eval_data, eval_labels)
-        fold_accuracy.append(mlp_acc)
-        acc = np.mean(fold_accuracy)
-        print(acc)
-    filename = 'finalized_model.sav'
-    pickle.dump(mlp, open(filename, 'wb'))
-    np.save('mask.npy', mask)
-
-
-
-
-
 class anIndividual:
     def __init__(self, specified_chromosome_length):
         self.chromosome = []
@@ -344,6 +286,6 @@ print("Function Evaluations: " + str(i))
 # simple_exploratory_attacker.plot_evolved_candidate_solutions()
 row = best_indiv.chromosome
 print(best_indiv.fitness)
-baseline_save(row)
+np.save('mask.npy', row)
 
 

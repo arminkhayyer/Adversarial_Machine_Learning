@@ -23,9 +23,78 @@ from Extractor.DatasetInfo import DatasetInfo
 from Extractor.Extractors import BagOfWords, Stylomerty, Unigram, CharacterGram
 
 
+mask = np.load("mask.npy")
+df = pd.read_csv('data/train/casis25_ncu.txt', header=None)
+features = ['casis25_char-gram_gram=3-limit=1000.txt', 'casis25_bow.txt', 'casis25_sty.txt']
+
+for feature in features:
+    df_feature = pd.read_csv("data/train/" + feature, header=None)
+    df = pd.merge(df, df_feature, on=0, how="left")
+    print(df_feature.shape)
+    print('adding {}'.format(feature))
+print(df)
 
 
-df_test = pd.read_csv("data/AdversarialTests.txt", header = None)
+df["label"] = df[0].map(lambda x: str(x)[0:4])
+df = df.drop(df.columns[[0]], axis=1)
+feature_df = df
+df_x = feature_df.drop(["label"], 1)
+df_x = df_x.loc[:, mask]
+x = np.array(df_x)
+y = np.array(feature_df["label"])
+
+CU_X, Y = x, y
+
+# rbfsvm = svm.SVC()
+# lsvm = svm.LinearSVC()
+mlp = MLPClassifier(max_iter=2000)
+
+skf = StratifiedKFold(n_splits=4, shuffle=True, random_state=0)
+fold_accuracy = []
+
+scaler = StandardScaler()
+tfidf = TfidfTransformer(norm=None)
+dense = Data_Utils.DenseTransformer()
+for train, test in skf.split(CU_X, Y):
+    # train split
+    CU_train_data = CU_X[train]
+    train_labels = Y[train]
+
+    # test split
+    CU_eval_data = CU_X[test]
+    eval_labels = Y[test]
+
+    # tf-idf
+    tfidf.fit(CU_train_data)
+    CU_train_data = dense.transform(tfidf.transform(CU_train_data))
+    CU_eval_data = dense.transform(tfidf.transform(CU_eval_data))
+
+    # standardization
+    scaler.fit(CU_train_data)
+    CU_train_data = scaler.transform(CU_train_data)
+    CU_eval_data = scaler.transform(CU_eval_data)
+
+    # normalization
+    CU_train_data = normalize(CU_train_data)
+    CU_eval_data = normalize(CU_eval_data)
+
+    train_data = CU_train_data
+    eval_data = CU_eval_data
+
+    # evaluation
+    # rbfsvm.fit(train_data, train_labels)
+    # lsvm.fit(train_data, train_labels)
+    mlp.fit(train_data, train_labels)
+
+    # rbfsvm_acc = rbfsvm.score(eval_data, eval_labels)
+    # lsvm_acc = lsvm.score(eval_data, eval_labels)
+    mlp_acc = mlp.score(eval_data, eval_labels)
+
+    fold_accuracy.append(mlp_acc)
+print(np.mean(fold_accuracy))
+
+
+# df_test = pd.read_csv("data/AdversarialTests.txt", header = None)
 data_dir = "data/AdversarialTest"
 feature_set_dir = "./datasets/"
 for i in range(4):
@@ -67,14 +136,22 @@ for i in range(4):
     # print(labels[0], data[0])
 print("Done")
 
+df_test = pd.read_csv('datasets/casis25_ncu.txt', header=None)
+features_test = ['casis25_char-gram_gram=3-limit=1000.txt', 'casis25_bow.txt', 'casis25_sty.txt']
+
+for feature in features_test:
+    df_feature = pd.read_csv("datasets/" + feature, header=None)
+    df_test = pd.merge(df_test, df_feature, on=0, how="left")
+    print(df_feature.shape)
+    print('adding {}'.format(feature))
+print(df_test)
 
 
 
-
-
-mask = np.load("mask.npy")
-
-
-model = pickle.load(open(filename, 'rb'))
-result = model.score(X_test, Y_test)
-print(result)
+df_test["label"] = df_test[0].map(lambda x: str(x)[0:4])
+df_test = df_test.drop(df_test.columns[[0]], axis=1)
+feature_df = df_test
+df_x = feature_df.drop(["label"], 1)
+df_x = df_x.loc[:, mask]
+x = np.array(df_x)
+y = np.array(feature_df["label"])
