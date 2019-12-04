@@ -15,11 +15,150 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.model_selection import StratifiedKFold
 from warnings import simplefilter
 from Extractor.Extractors import BagOfWords, Stylomerty, Unigram, CharacterGram
+from matplotlib import pyplot as plt
 
-# Kernel Setup
-os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'  # Comment this line on other OS'
-simplefilter(action="ignore", category=FutureWarning)
-np.random.seed(123)
+class anIndividual:
+    def __init__(self, specified_chromosome_length):
+        self.chromosome = []
+        self.fitness_RBFSVM = 0
+        self.fitness_LSVM = 0
+        self.fitness_MLP = 0
+        self.fitness = 0
+        self.chromosome_length = specified_chromosome_length
+
+    def randomly_generate(self):
+        for i in range(self.chromosome_length):
+            self.chromosome.append(random.choice([True, False, True]))
+
+    def calculate_fitness(self):
+        self.fitness_RBFSVM, self.fitness_LSVM, self.fitness_MLP = Baselin(self.chromosome)
+        self.fitness = (self.fitness_RBFSVM + self.fitness_LSVM + self.fitness_MLP) / 3
+
+    def print_individual(self, i):
+        print("Chromosome - " + str(i) + "- number of features: " + str(sum(self.chromosome)) + " Fitness: " + str(
+            self.fitness))
+
+
+class aSimpleExploratoryAttacker:
+    def __init__(self, population_size, chromosome_length, mutation_rate):
+        if (population_size < 2):
+            print("Error: Population Size must be greater than 2")
+            sys.exit()
+        self.population_size = population_size
+        self.chromosome_length = chromosome_length
+        self.mutation_amt = mutation_rate
+        self.population = []
+        self.hacker_tracker_x = []
+        self.hacker_tracker_y = []
+        self.hacker_tracker_z = []
+
+    def generate_initial_population(self):
+        for i in range(self.population_size):
+            individual = anIndividual(self.chromosome_length)
+            individual.randomly_generate()
+            individual.calculate_fitness()
+            self.population.append(individual)
+
+    def get_worst_fit_individual(self):
+        worst_fitness = 999999999.0  # For Maximization
+        worst_individual = -1
+        for i in range(self.population_size):
+            if (self.population[i].fitness < worst_fitness):
+                worst_fitness = self.population[i].fitness
+                worst_individual = i
+            elif (self.population[i].fitness == worst_fitness):
+                if sum(self.population[i].chromosome) > sum(self.population[worst_individual].chromosome):
+                    worst_fitness = self.population[i].fitness
+                    worst_individual = i
+        return worst_individual
+
+    def get_best_fitness(self):
+        best_fitness = -99999999999.0
+        best_individual = -1
+        for i in range(self.population_size):
+            if self.population[i].fitness > best_fitness:
+                best_fitness = self.population[i].fitness
+                best_individual = i
+        return best_fitness
+
+    def tournoment_selection(self, k=2):
+        tournoment_output1 = random.choices(self.population, k=k)
+        best_indivisual1 = [i.fitness for i in tournoment_output1]
+        if best_indivisual1[0] > best_indivisual1[1]:
+            parent1 = tournoment_output1[0]
+        elif best_indivisual1[0] == best_indivisual1[1]:
+            if sum(tournoment_output1[0].chromosome) < sum(tournoment_output1[1].chromosome):
+                parent1 = tournoment_output1[0]
+            else:
+                parent1 = tournoment_output1[1]
+        else:
+            parent1 = tournoment_output1[1]
+
+        # parent1 = tournoment_output1[best_indivisual1.index(max(best_indivisual1))]
+
+        tournoment_output2 = random.choices(self.population, k=k)
+        best_indivisual2 = [i.fitness for i in tournoment_output2]
+        if best_indivisual2[0] > best_indivisual2[1]:
+            parent2 = tournoment_output2[0]
+        elif best_indivisual2[0] == best_indivisual2[1]:
+            if sum(tournoment_output2[0].chromosome) < sum(tournoment_output2[1].chromosome):
+                parent2 = tournoment_output2[0]
+            else:
+                parent2 = tournoment_output2[1]
+        else:
+            parent2 = tournoment_output2[1]
+        # parent2 = tournoment_output2[best_indivisual2.index(max(best_indivisual2))]
+        return parent1, parent2
+
+    def Crossover_operator(self, mom, dad):
+        kid = anIndividual(self.chromosome_length)
+        kid.randomly_generate()
+        for j in range(self.chromosome_length):
+            prob = random.uniform(0, 1)
+            prob_mut = random.uniform(0, 1)
+            if prob <= .5:
+                kid.chromosome[j] = mom.chromosome[j]
+            else:
+                kid.chromosome[j] = dad.chromosome[j]
+
+            if prob_mut >= self.mutation_amt:
+                pass
+            else:
+                kid.chromosome[j] = not kid.chromosome[j]
+        return kid
+
+    def evolutionary_cycle(self):
+        mom, dad = self.tournoment_selection()
+        worst_individual = self.get_worst_fit_individual()
+        self.population.pop(worst_individual)
+        kid = self.Crossover_operator(mom, dad)
+        self.population.append(kid)
+        kid.calculate_fitness()
+
+    def print_population(self):
+        for i in range(self.population_size):
+            self.population[i].print_individual(i)
+
+    def print_best_max_fitness(self):
+        best_fitness = -999999999.0  # For Maximization
+        best_individual = -1
+        for i in range(self.population_size):
+            if self.population[i].fitness > best_fitness:
+                best_fitness = self.population[i].fitness
+                best_individual = i
+        print("Best Indvidual: ", str(best_individual), " ", self.population[best_individual].chromosome, " Fitness: ",
+              str(best_fitness))
+        return self.population[best_individual]
+
+    def plot_evolved_candidate_solutions(self):
+        fig = plt.figure()
+        ax1 = fig.add_subplot(1,1,1,projection='3d')
+        ax1.scatter(self.hacker_tracker_x,self.hacker_tracker_y,self.hacker_tracker_z)
+        plt.title("Evolved Candidate Solutions")
+        ax1.set_xlim3d(-100.0,100.0)
+        ax1.set_ylim3d(-100.0,100.0)
+        ax1.set_zlim3d(0.2,1.0)
+        plt.show()
 
 def extract_features():
     data_dir = "./data/"
@@ -186,7 +325,6 @@ def Baselin_predict(mask):
     for elem in range(len(pred_rbfsvm)):
         model_list = [pred_lsvm[elem], pred_rbfsvm[elem], pred_mlp[elem]]
         duplicates = [x for n, x in enumerate(model_list) if x in model_list[:n]]
-        print(duplicates)
         if duplicates:
             pred.append(duplicates[0])
         else:
@@ -204,163 +342,10 @@ def Baselin_predict(mask):
     df_res = df_out.sort_values(by=[0])
     df_res.to_csv("AdversarialTestResults.txt", header=None, index=None, sep=' ')
 
-class anIndividual:
-    def __init__(self, specified_chromosome_length):
-        self.chromosome = []
-        self.fitness_RBFSVM = 0
-        self.fitness_LSVM = 0
-        self.fitness_MLP = 0
-        self.fitness = 0
-        self.chromosome_length = specified_chromosome_length
-
-    def randomly_generate(self):
-        for i in range(self.chromosome_length):
-            self.chromosome.append(random.choice([True, False, True]))
-
-    def calculate_fitness(self):
-        self.fitness_RBFSVM, self.fitness_LSVM, self.fitness_MLP = Baselin(self.chromosome)
-        self.fitness = (self.fitness_RBFSVM + self.fitness_LSVM + self.fitness_MLP) / 3
-
-    def print_individual(self, i):
-        print("Chromosome - " + str(i) + "- number of features: " + str(sum(self.chromosome)) + " Fitness: " + str(
-            self.fitness))
-
-
-class aSimpleExploratoryAttacker:
-    def __init__(self, population_size, chromosome_length, mutation_rate):
-        if (population_size < 2):
-            print("Error: Population Size must be greater than 2")
-            sys.exit()
-        self.population_size = population_size
-        self.chromosome_length = chromosome_length
-        self.mutation_amt = mutation_rate
-        self.population = []
-
-    def generate_initial_population(self):
-        for i in range(self.population_size):
-            individual = anIndividual(self.chromosome_length)
-            individual.randomly_generate()
-            individual.calculate_fitness()
-            self.population.append(individual)
-
-    def get_worst_fit_individual(self):
-        worst_fitness = 999999999.0  # For Maximization
-        worst_individual = -1
-        for i in range(self.population_size):
-            if (self.population[i].fitness < worst_fitness):
-                worst_fitness = self.population[i].fitness
-                worst_individual = i
-            elif (self.population[i].fitness == worst_fitness):
-                if sum(self.population[i].chromosome) > sum(self.population[worst_individual].chromosome):
-                    worst_fitness = self.population[i].fitness
-                    worst_individual = i
-        return worst_individual
-
-    # def get_worst_fit_individual(self):
-    #     worst_fitness = 999999999.0  # For Maximization
-    #     worst_individual = -1
-    #     for i in range(self.population_size):
-    #         if (self.population[i].fitness < worst_fitness):
-    #             worst_fitness = self.population[i].fitness
-    #             worst_individual = i
-    #     return worst_individual
-
-    def get_best_fitness(self):
-        best_fitness = -99999999999.0
-        best_individual = -1
-        for i in range(self.population_size):
-            if self.population[i].fitness > best_fitness:
-                best_fitness = self.population[i].fitness
-                best_individual = i
-        return best_fitness
-
-    # def tournoment_selection(self, k=2):
-    #     tournoment_output1 = random.choices(self.population, k=k)
-    #     best_indivisual1 = [i.fitness for i in tournoment_output1]
-    #     parent1 = tournoment_output1[best_indivisual1.index(max(best_indivisual1))]
-    #     tournoment_output2 = random.choices(self.population, k=k)
-    #     best_indivisual2 = [i.fitness for i in tournoment_output2]
-    #     parent2 = tournoment_output2[best_indivisual2.index(max(best_indivisual2))]
-    #     return parent1, parent2
-
-    def tournoment_selection(self, k=2):
-        tournoment_output1 = random.choices(self.population, k=k)
-        best_indivisual1 = [i.fitness for i in tournoment_output1]
-        if best_indivisual1[0] > best_indivisual1[1]:
-            parent1 = tournoment_output1[0]
-        elif best_indivisual1[0] == best_indivisual1[1]:
-            if sum(tournoment_output1[0].chromosome) < sum(tournoment_output1[1].chromosome):
-                parent1 = tournoment_output1[0]
-            else:
-                parent1 = tournoment_output1[1]
-        else:
-            parent1 = tournoment_output1[1]
-
-        # parent1 = tournoment_output1[best_indivisual1.index(max(best_indivisual1))]
-
-        tournoment_output2 = random.choices(self.population, k=k)
-        best_indivisual2 = [i.fitness for i in tournoment_output2]
-        if best_indivisual2[0] > best_indivisual2[1]:
-            parent2 = tournoment_output2[0]
-        elif best_indivisual2[0] == best_indivisual2[1]:
-            if sum(tournoment_output2[0].chromosome) < sum(tournoment_output2[1].chromosome):
-                parent2 = tournoment_output2[0]
-            else:
-                parent2 = tournoment_output2[1]
-        else:
-            parent2 = tournoment_output2[1]
-        # parent2 = tournoment_output2[best_indivisual2.index(max(best_indivisual2))]
-        return parent1, parent2
-
-    def Crossover_operator(self, mom, dad):
-        kid = anIndividual(self.chromosome_length)
-        kid.randomly_generate()
-        for j in range(self.chromosome_length):
-            prob = random.uniform(0, 1)
-            prob_mut = random.uniform(0, 1)
-            if prob <= .5:
-                kid.chromosome[j] = mom.chromosome[j]
-            else:
-                kid.chromosome[j] = dad.chromosome[j]
-
-            if prob_mut >= self.mutation_amt:
-                pass
-            else:
-                kid.chromosome[j] = not kid.chromosome[j]
-        return kid
-
-    def evolutionary_cycle(self):
-        mom, dad = self.tournoment_selection()
-        worst_individual = self.get_worst_fit_individual()
-        self.population.pop(worst_individual)
-        kid = self.Crossover_operator(mom, dad)
-        self.population.append(kid)
-        kid.calculate_fitness()
-
-    def print_population(self):
-        for i in range(self.population_size):
-            self.population[i].print_individual(i)
-
-    def print_best_max_fitness(self):
-        best_fitness = -999999999.0  # For Maximization
-        best_individual = -1
-        for i in range(self.population_size):
-            if self.population[i].fitness > best_fitness:
-                best_fitness = self.population[i].fitness
-                best_individual = i
-        print("Best Indvidual: ", str(best_individual), " ", self.population[best_individual].chromosome, " Fitness: ",
-              str(best_fitness))
-        return self.population[best_individual]
-
-    # def plot_evolved_candidate_solutions(self):
-    #     fig = plt.figure()
-    #     ax1 = fig.add_subplot(1,1,1,projection='3d')
-    #     ax1.scatter(self.hacker_tracker_x,self.hacker_tracker_y,self.hacker_tracker_z)
-    #     plt.title("Evolved Candidate Solutions")
-    #     ax1.set_xlim3d(-100.0,100.0)
-    #     ax1.set_ylim3d(-100.0,100.0)
-    #     ax1.set_zlim3d(0.2,1.0)
-    #     plt.show()
+# Kernel Setup
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'  # Comment this line on other OS'
+simplefilter(action="ignore", category=FutureWarning)
+np.random.seed(123)
 
 extract_features()
 df = pd.read_csv('datasets/casis25_ncu.txt', header=None)
@@ -383,7 +368,7 @@ except:
     simplefilter(action='ignore', category=FutureWarning)
 
     ChromLength = len(df.columns) - 2
-    MaxEvaluations = 30
+    MaxEvaluations = 15
 
     PopSize = 10
     mu_amt = 0.01
