@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@author: Armin Khayyer
+@author: Armin Khayyer, Bhargav Joshi
 """
 import os
 import random
@@ -23,10 +23,69 @@ import pandas as pd
 from warnings import simplefilter
 import pickle
 from sklearn.model_selection import train_test_split
+import Data_Utils
+import pandas as pd
+from Extractor.DatasetInfo import DatasetInfo
+from Extractor.Extractors import BagOfWords, Stylomerty, Unigram, CharacterGram
 
+data_dir = "./data/"
+feature_set_dir = "./datasets/"
 
+def extract_features():
+    for i in range(4):
+        if i == 0:
+            extractor = Unigram(data_dir + "CASIS25/", "casis25")
+        elif i == 1:
+            extractor = Stylomerty(data_dir + "CASIS25/", "casis25")
+        elif i == 2:
+            extractor = BagOfWords(data_dir + "CASIS25/", "casis25")
+        else:
+            extractor = CharacterGram(data_dir + "CASIS25/", "casis25", gram=3, limit=1000)
 
+        extractor.start()
+        lookup_table = extractor.lookup_table
+        print("Generated Lookup Table:")
+        # print(lookup_table)
+        col = []
+        if lookup_table is not False:
+            print("'" + "', '".join([str("".join(x)).replace("\n", " ") for x in lookup_table]) + "'")
+            for x in lookup_table:
+                col.append("'" + "', '".join([str("".join(x)).replace("\n", " ")]) + "'")
+            generated_file = feature_set_dir + extractor.out_file + ".txt"
+            generated_csv_file = feature_set_dir + extractor.out_file + ".csv"
+            data, labels = Data_Utils.get_dataset(generated_file)
+            df = pd.DataFrame(data, columns=col)
+            df.insert(0, "Label", labels, True)
+            df.to_csv(generated_csv_file)
+        else:
+            generated_file = feature_set_dir + extractor.out_file + ".txt"
+            generated_csv_file = feature_set_dir + extractor.out_file + ".csv"
+            data, labels = Data_Utils.get_dataset(generated_file)
+            df = pd.DataFrame(data)
+            df.insert(0, "Label", labels, True)
+            df.to_csv(generated_csv_file)
 
+        # Get dataset information
+        dataset_info = DatasetInfo("casis25_bow")
+        dataset_info.read()
+        authors = dataset_info.authors
+        writing_samples = dataset_info.instances
+        print("\n\nAuthors in the dataset:")
+        print(authors)
+
+        print("\n\nWriting samples of an author 1000")
+        print(authors["1000"])
+
+        print("\n\nAll writing samples in the dataset")
+        print(writing_samples)
+
+        print("\n\nThe author of the writing sample 1000_1")
+        print(writing_samples["1000_1"])
+
+        # print(labels[0], data[0])
+    print("Done")
+
+extract_features()
 df = pd.read_csv('datasets/casis25_ncu.txt', header=None)
 
 features = ['casis25_char-gram_gram=3-limit=1000.txt', 'casis25_bow.txt', 'casis25_sty.txt']
@@ -330,7 +389,7 @@ try:
 except:
     simplefilter(action='ignore', category=FutureWarning)
 
-    ChromLength = 7641
+    ChromLength = len(df.columns) - 2
     MaxEvaluations = 4
 
     PopSize = 3
@@ -354,7 +413,7 @@ except:
     best_indiv = simple_exploratory_attacker.print_best_max_fitness()
     print("Function Evaluations: " + str(i))
     # simple_exploratory_attacker.plot_evolved_candidate_solutions()
-    mask = np.arry(best_indiv.chromosome)
+    mask = np.array(best_indiv.chromosome)
     print(best_indiv.fitness)
     np.save('mask.npy', mask)
 
