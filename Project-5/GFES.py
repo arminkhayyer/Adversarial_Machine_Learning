@@ -54,7 +54,7 @@ def Baselin(mask):
 
     # rbfsvm = svm.SVC()
     # lsvm = svm.LinearSVC()
-    mlp = MLPClassifier(max_iter=2000)
+    mlp = MLPClassifier(hidden_layer_sizes=(100,100, 100, 100, 100),max_iter=2000)
 
     skf = StratifiedKFold(n_splits=4, shuffle=True, random_state=0)
     fold_accuracy = []
@@ -111,7 +111,7 @@ def Baselin_predict(mask):
 
     # rbfsvm = svm.SVC()
     # lsvm = svm.LinearSVC()
-    mlp = MLPClassifier(max_iter=2000)
+    mlp = MLPClassifier(hidden_layer_sizes=(100, 100, 100, 100),max_iter=2000)
 
     skf = StratifiedKFold(n_splits=4, shuffle=True, random_state=0)
     fold_accuracy = []
@@ -156,12 +156,11 @@ def Baselin_predict(mask):
         mlp_acc = mlp.score(eval_data, eval_labels)
 
         fold_accuracy.append(mlp_acc)
-    print(np.mean(fold_accuracy))
+    print("accuracy Measure",np.mean(fold_accuracy))
     CU_pred_data = dense.transform(tfidf.transform(x_pred))
 
     CU_pred_data = scaler.transform(CU_pred_data)
     CU_pred_data = normalize(CU_pred_data)
-    print(CU_pred_data[0].shape)
     pred = [mlp.predict(i.reshape(1, -1))[0] for i in CU_pred_data]
     df_test["pred"] = pred
     df_out = df_test[[0, "pred"]]
