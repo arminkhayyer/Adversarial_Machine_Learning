@@ -1,6 +1,0 @@
-advText00.txt
-advText01.txt
-advText02.txt
-advText03.txt
-advText04.txt
-advText05.txt
