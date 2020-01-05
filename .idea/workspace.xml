@@ -1,55 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53a11553-8514-4f78-873a-a450f6cf6d47" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Project-5/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final_project/GA_recon.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final_project/GEFS.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final_project/KerasNN.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final_project/mask_reader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-1/simpleExploratoryAttacker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project-1/simpleExploratoryAttacker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-2/Master-PSO.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project-2/Master-PSO.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-2/ring_asynchronous.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Project-2/ring_asynchronous.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-2/ring_synchronous.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Project-2/ring_synchronous.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-2/star_asynchronous.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Project-2/star_asynchronous.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-2/star_synchronous.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Project-2/star_synchronous.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/AdversarialTests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/GFES_B.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/GFES_B.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/MaskAdv.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/MaskAdv.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest00.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/datasets/advTest00.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest01.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest02.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest03.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest04.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest05.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/datasets/advTest05.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest06.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest07.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest08.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest09.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/datasets/advTest10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest12.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest13.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest14.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest15.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/datasets/advTest15.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest17.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest18.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest19.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest20.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest21.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest22.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest23.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest24.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/AdvTest/advTest25.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/CASIS25/advTest00.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/CASIS25/advTest05.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/CASIS25/advTest10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/data/CASIS25/advTest15.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/mask.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-5/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project-5/setup.py" afterDir="false" />
-    </list>
+    <list default="true" id="53a11553-8514-4f78-873a-a450f6cf6d47" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +49,7 @@
       <file leaf-file-name="GEFS.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/final_project/GEFS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2418">
+            <state relative-caret-position="855">
               <caret line="79" column="16" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="16" />
               <folding>
                 <element signature="e#55#64#0" expanded="true" />
@@ -109,8 +61,8 @@
       <file leaf-file-name="GA_recon.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/final_project/GA_recon.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="155">
+              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="100" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <marker date="1575954495254" expanded="true" signature="2720:2725" ph="..." />
@@ -228,6 +180,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -238,13 +191,27 @@
             <path>
               <item name="Adversarial_m" type="b2602c69:ProjectViewProjectNode" />
               <item name="Adversarial_m" type="462c0819:PsiDirectoryNode" />
-              <item name="final_project" type="462c0819:PsiDirectoryNode" />
+              <item name="Project-1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Adversarial_m" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Adversarial_m" type="462c0819:PsiDirectoryNode" />
+              <item name="Project-5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Adversarial_m" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Adversarial_m" type="462c0819:PsiDirectoryNode" />
+              <item name="Project5-submission_group7" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Adversarial_m" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Adversarial_m" type="462c0819:PsiDirectoryNode" />
+              <item name="Project_4" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -480,27 +447,47 @@
       <option name="project" value="LOCAL" />
       <updated>1572667386319</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Merge branch 'master' of https://github.com/arminkhayyer/Adversarial_m&#10;&#10;# Conflicts:&#10;#&#9;.DS_Store">
+      <created>1578188960481</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1578188960481</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Merge branch 'master' of https://github.com/arminkhayyer/Adversarial_m&#10;&#10;# Conflicts:&#10;#&#9;.DS_Store">
+      <created>1578189112128</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1578189112128</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Merge branch 'master' of https://github.com/arminkhayyer/Adversarial_m&#10;&#10;# Conflicts:&#10;#&#9;.DS_Store">
+      <created>1578189120466</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1578189120466</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50143063" side_tool="true" weight="0.37333333" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.29575756" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32969698" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32969698" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.29575756" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4985694" weight="0.37333333" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49913943" visible="true" weight="0.24320458" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4985694" visible="true" weight="0.37333333" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49913943" visible="true" weight="0.24678111" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" weight="0.6688126" />
       <window_info id="Structure" order="1" sideWeight="0.5008606" side_tool="true" weight="0.24320458" />
-      <window_info id="Favorites" order="2" sideWeight="0.5008606" side_tool="true" weight="0.24320458" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" sideWeight="0.5008606" side_tool="true" weight="0.24320458" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -513,24 +500,24 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23390558" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32969698" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.35636362" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32969698" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4985694" visible="true" weight="0.37333333" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50143063" side_tool="true" weight="0.37333333" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32969698" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.27968526" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32969698" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,6 +538,27 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/final_project/GEFS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="79" column="16" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="16" />
+          <folding>
+            <element signature="e#55#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/final_project/GA_recon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1575954495254" expanded="true" signature="2720:2725" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Project-2/Master-PSO.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3300">
@@ -746,13 +754,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project-5/KerasNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Project-5/GFES_B.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -765,9 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5871">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#70#79#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -775,9 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
           <caret line="26" column="30" selection-end-line="44" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -792,9 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
           <caret line="34" selection-start-line="34" selection-end-line="34" selection-end-column="20" />
-          <folding>
-            <element signature="e#55#64#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -802,18 +795,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="47">
           <caret line="286" selection-start-line="286" selection-end-line="286" selection-end-column="21" />
-          <folding>
-            <element signature="e#55#64#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project_4/normal.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/final_project/GEFS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2418">
+        <state relative-caret-position="855">
           <caret line="79" column="16" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="16" />
           <folding>
             <element signature="e#55#64#0" expanded="true" />
@@ -823,8 +810,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/final_project/GA_recon.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="155">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="100" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <marker date="1575954495254" expanded="true" signature="2720:2725" ph="..." />

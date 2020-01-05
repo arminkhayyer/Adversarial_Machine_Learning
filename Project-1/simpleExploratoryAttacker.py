@@ -130,8 +130,13 @@ mu_amt  = 0.008
 
 
 
+<<<<<<< HEAD
 pop_size = [3, 100, 50, 20]
 muamt =  [  0.005]
+=======
+pop_size = [3, 4, 5, 50, 100, 500, 1000]
+muamt =  [0.005]
+>>>>>>> 15f10165e7edb6d280a97b6affbefbff4cb5702a
 dictinary = {}
 for k in pop_size:
     for j in muamt:
@@ -146,8 +151,8 @@ for k in pop_size:
                 best = i
                 simple_exploratory_attacker.evolutionary_cycle()
                 if (i % k == 0):
-                    if (plot == 1):
-                        simple_exploratory_attacker.plot_evolved_candidate_solutions()
+                    #if (plot == 1):
+                        #simple_exploratory_attacker.plot_evolved_candidate_solutions()
                     print("At Iteration: " + str(i))
                     simple_exploratory_attacker.print_population()
                 if (simple_exploratory_attacker.get_best_fitness() >= 0.99754):
