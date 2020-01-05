@@ -4,7 +4,7 @@ from shutil import copyfile
 
 TestFileList = "AdversarialTests.txt"
 TestPath = "data/CASIS25/"
-TestFilePath = 'data/advTest/'
+TestFilePath = 'advTest/'
 
 for filename in glob.glob(TestPath + "adv*"):
     os.remove(filename)

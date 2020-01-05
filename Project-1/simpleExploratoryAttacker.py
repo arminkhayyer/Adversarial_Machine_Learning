@@ -130,13 +130,13 @@ mu_amt  = 0.008
 
 
 
-pop_size = [3, 4, 5, 6]
-muamt =  [  0.005, 0.006, 0.007,  0.008,  0.009]
+pop_size = [3, 100, 50, 20]
+muamt =  [  0.005]
 dictinary = {}
 for k in pop_size:
     for j in muamt:
         aver = 0
-        for p in range(10):
+        for p in range(1):
             simple_exploratory_attacker = aSimpleExploratoryAttacker(k, ChromLength, j, lb, ub)
 
             simple_exploratory_attacker.generate_initial_population()

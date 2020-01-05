@@ -368,9 +368,9 @@ except:
     simplefilter(action='ignore', category=FutureWarning)
 
     ChromLength = len(df.columns) - 2
-    MaxEvaluations = 15
+    MaxEvaluations = 20
 
-    PopSize = 10
+    PopSize = 5
     mu_amt = 0.01
 
     simple_exploratory_attacker = aSimpleExploratoryAttacker(chromosome_length=ChromLength, mutation_rate=mu_amt,

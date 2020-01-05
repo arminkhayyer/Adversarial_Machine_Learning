@@ -1,4 +1,0 @@
-advTest00.txt
-advTest05.txt
-advTest10.txt
-advTest15.txt
